@@ -12,3 +12,5 @@ services:
       - redis
   redis:
     image: quay.io/smile/redis
+    expose:
+      - 8080
