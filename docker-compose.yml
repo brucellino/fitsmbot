@@ -1,0 +1,14 @@
+---
+version: "3"
+services:
+  hubot:
+    build: .
+    env_file:
+      - common.env
+      - secrets.env
+    expose:
+      - 8080
+    depends_on:
+      - redis
+  redis:
+    image: quay.io/smile/redis
