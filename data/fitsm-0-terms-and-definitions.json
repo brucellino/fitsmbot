@@ -1,6 +1,7 @@
 {
   "title": "For the purpose of the FitSM family of standards, the following terms and definitions apply",
-  "version": "2.4"
+  "version": "2.4",
+  "license": "cc-by-nd",
   "terms": [
     {
       "name": "Accessibility of information",
@@ -250,101 +251,121 @@
       ]
     },
     {
-      "name": "",
+      "name": "Federation",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Situation in which multiple parties, the federation members, jointly contribute to the delivery of services to customers without being organised in a strict hierarchical setup or supply chain.",
+      "section": "5.23",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Federation Member",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Individual, organisation or body that works together with other federation members in a federation to provide one or more services",
+      "section": "5.24",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Often, federation members will not be bound together by strict contractual agreements."
+        }
+      ]
+    },
+    {
+      "name": "Federator",
+      "aka": "",
+      "description": "Body that acts to coordinate a set of federation members",
+      "section": "5.25",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Improvement",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Action or set of actions carried out to increase the level of conformity, effectiveness or efficiency of a management system, process or activity, or to increase the quality or performance of a service or service componen",
+      "section": "5.26",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "An improvement is usually implemented after an opportunity for improvement has been identified, for instance during a service review, audit or management review."
+        }
+      ]
+    },
+    {
+      "name": "Incident",
+      "aka": "",
+      "description": "Unplanned disruption of operation in a service or service component, or degradation of service quality versus the expected or agreed service level or operational level according to service level agreements (SLAs), operational level agreements (OLAs) and underpinning agreements (UAs).",
+      "section": "5.27",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Information Security",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Preservation of confidentiality, integrity and accessibility of information",
+      "section": "5.28",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Information Security Control",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Means of controlling or treating one or more risks to information security",
+      "section": "5.29",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Information Security Event",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Occurrence or previously unknown situation indicating a possible breach of information security",
+      "section": "5.30",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Information security incident",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Single information security event or a series of information security events with a significant probability of having a negative impact on the delivery of services to customers, and therefore on the customers’ business operations",
+      "section": "5.31",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Integrity of information",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Property of information not being subject to unauthorized modification, duplication or deletion",
+      "section": "5.32",
       "notes": []
     },
     {
-      "name": "",
+      "name": "IT service",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Service that is enabled by the use of information technology (IT)",
+      "section": "5.33",
       "notes": []
     },
     {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "name": "IT Service Management",
+      "aka": "ITSM",
+      "description": "Entirety of activities performed by an IT service provider to plan, deliver, operate and control IT services offered to customers",
+      "section": "5.34",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The activities carried out in the ITSM context should be directed by policies and structured and organised by processes and supporting procedures."
+        }
+      ]
     },
     {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "name": "Key performance indicator",
+      "aka": "KPI",
+      "description": "Metric that is used to track the performance, effectiveness or efficiency of a service or proces",
+      "section": "5.35",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "KPIs are generally important metrics that will be aligned to critical success factors and important goals. KPIs are therefore a subset of all possible metrics, intended to allow for monitoring a service or process"
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Known Error",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Problem which has not (yet) been corrected, but for which there is a documented workaround or temporary fix to prevent (excessive) negative impact on services",
+      "section": "5.36",
       "notes": []
     },
     {
