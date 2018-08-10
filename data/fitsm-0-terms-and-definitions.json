@@ -683,145 +683,111 @@
       "notes": []
     },
     {
-      "name": "",
+      "name": "Service Request",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "User request for information, advice, access to a service or a pre-approved change",
+      "section": "5.66",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Service requests are often handled by the same process and tools as incidents."
+        }
+      ]
+    },
+    {
+      "name": "Service Review",
+      "aka": "",
+      "description": "Periodic evaluation of the quality and performance of a service together with the customer or under consideration of customer feedback, from which opportunities for improvement are identified, follow-up actions to increase the value of the service are determined",
+      "section": "5.67",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Service target",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Reference / target values for a parameter used to measure the performance of a service, listed in a service level agreement (SLA) related to this service",
+      "section": "5.68",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Typical service targets might include availability or resolution time for incidents."
+        }
+      ]
+    },
+    {
+      "name": "Supplier",
+      "aka": "",
+      "description": "External organisation that provides a (supporting) service or service component(s) to the service provider, which they need to provide services to their customers or users",
+      "section": "5.69",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Top Management",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Senior management within an organisation who has authority to set policies and exercise overall control of the organisation",
+      "section": "5.70",
       "notes": []
     },
     {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
+      "name": "Underpinning Agreement",
+      "aka": "UA",
+      "description": "Documented agreement between a service provider and an external supplier that specifies the underpinning service(s) or service component(s) to be provided by the supplier, together with the related service targets",
+      "section": "5.71",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "A UA can be seen as a service level agreement (SLA) with an external supplier where the service provider is in the customer role."
+        },
+        {
+          "name": "Note 2",
+          "description": "A UA may also be referred to as an underpinning contract (UC)."
+        }
+      ]
+    },
+    {
+      "name": "Underpinning Contract",
+      "aka": "UC",
+      "description": "A UC may also be referred to as an underpinning agreement (Ua).",
+      "section": "5.72",
       "notes": []
     },
     {
-      "name": "",
+      "name": "User",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Individual that primarily benefits from and uses a service",
+      "section": "5.73",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Value",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Benefit to a customer and their users delivered by a service",
+      "section": "5.74",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Value should be considered as a composition of the utility (fitness for purpose) and warranty (fitness for use, covering sufficient availability / continuity, capacity / performance and information security) connected to a service."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Workaround",
       "aka": "",
-      "description": "",
+      "description": "Means of circumventing or mitigating the symptoms of a known error that helps to resolve incidents caused by this known error, while the underlying root cause is not permanently eliminated",
       "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Workarounds are often applied in a situation, when the actual root cause of (recurring) incidents cannot be resolved due to lack of resources or ability."
+        },
+        {
+          "name": "Note 2",
+          "description": "A workaround may consist of a set of actions to be carried out by either the provider or the user of the service."
+        },
+        {
+          "name": "Note 3",
+          "description": "A workaround is also referred to as a temporary fix or temporary solution."
+        }
+      ]
+    }
   ]
 }
