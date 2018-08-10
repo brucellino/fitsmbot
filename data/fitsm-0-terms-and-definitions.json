@@ -369,144 +369,218 @@
       "notes": []
     },
     {
-      "name": "",
+      "name": "Management Review",
       "aka": "",
-      "description": "",
+      "description": "Periodic evaluation of the suitability, maturity and efficiency of the entire management system by its accountable owner(s), from which opportunities for improvement are identified and follow-up
+      actions are determined",
+      "section": "5.37",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The accountable owner of a management system is usually a top management representative of the organisation operating the management system. In a federation, the accountable owner is usually one person nominated by top management representatives of all organisations (i.e. federation members) involved."
+        }
+      ]
+    },
+    {
+      "name": "Management system",
+      "aka": "",
+      "description": "Entirety of policies, processes, procedures and related resources and capabilities aiming at effectively performing management tasks in a given context and for a given subject",
+      "section": "5.38",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "A management system is generally intangible. It is based on the idea of a systematic, structured and process-oriented way of managing."
+        },
+        {
+          "name": "Note 2",
+          "description": "While documentation (such as process definitions, procedures and records) and tools such as workflow support and monitoring tools) can be parts of a management system, management          system considerations are not limited to the questions of documentation and tool support."
+        },
+        {
+          "name": "Note 3",
+          "description": "With respect to (IT) service management and the FitSM standard series, the idea of a service management system (SMS) is a central concept, where the context of the management system is the organisational context of the service provider, and the subject is to plan, deliver, operate and control (IT) services."
+        }
+      ]
+    },
+    {
+      "name": "Maturity Level",
+      "aka": "5.39",
+      "description": "Achieved overall effectiveness of a service management system, based on the combination of the capability levels of its processes and general aspects of management",
       "section": "",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Nonconformity",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Case or situation where a requirement is not fulfilled",
+      "section": "5.40",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "This may also be referred to as noncompliance."
+        }
+      ]
+    },
+    {
+      "name": "Operational Level Agreement",
+      "aka": "OLA",
+      "description": "Documented agreement between a service provider and another part of the service provider’s organisation or a federation member to provide a service component or subsidiary service needed to allow provision of services to customers",
+      "section": "5.41",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Operational Target",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Reference / target value for a parameter used to measure the performance of a service component, listed in an operational level agreement (OLA) or underpinning agreement (UA) related to this service component",
+      "section": "5.42",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Typical operational targets might include availability or allowed resolution times for incidents."
+        }
+      ]
+    },
+    {
+      "name": "Policy",
+      "aka": "",
+      "description": "Documented set of intentions, expectations, goals, rules and requirements, often formally expressed by top management representatives in an organisation or federation",
+      "section": "5.43",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Policies are then realised in processes, which are in turn made up of activities that people carry out according to defined procedures."
+        }
+      ]
+    },
+    {
+      "name": "Post-Implementation Review",
+      "aka": "PIR",
+      "description": "Review after the implementation of a change that determines if the change was successful",
+      "section": "5.44",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Depending on the specific type and complexity of the change, the post implementation review may vary widely in its depth"
+        }
+      ]
+    },
+    {
+      "name": "Priority",
+      "aka": "",
+      "description": "Relative importance of a target, object or activity",
+      "section": "5.45",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Often incidents, service requests, problems and changes are given a priority. In the case of incidents and problems, priority is usually based on the specific impact and urgency of the situation."
+        }
+      ]
+    },
+    {
+      "name": "Problem",
+      "aka": "",
+      "description": "Underlying cause of one or more incidents that requires further investigation to prevent incidents from recurring or reduce the negative impact on services",
+      "section": "5.46",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Procedure",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Specified set of steps or instructions to be carried out by an individual or group to perform one or more activities of a process",
+      "section": "5.47",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Process",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Structured set of activities, with clearly defined responsibilities, that bring about a specific objective or set of results from a set of defined inputs",
+      "section": "5.48",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Generally, a process consists of a number of activities used to manage services, if the process is part of a service management system (SMS)."
+        }
+      ]
+    },
+    {
+      "name": "Record",
+      "aka": "",
+      "description": "Documentation of an event or of the results of performing a process or activity",
+      "section": "5.49",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Release",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Set of one or more changes to configuration items (CIs) that are grouped together and deployed as a logical unit",
+      "section": "5.50",
       "notes": []
     },
     {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
+      "name": "Request for Change",
+      "aka": "RFC",
+      "description": "Documented proposal for a change to be made to one or more configuration items (CIs)",
+      "section": "5.51",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Risk",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Possible negative occurrence that would have a negative impact on the service provider’s ability to deliver agreed services to customers, or that would decrease the value generated through some service",
+      "section": "5.52",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Risk is made up of the probability of the threat entailed, the vulnerability to that threat of some asset, and the impact the threat would have, if it occurred."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Role",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Set of responsibilities and connected behaviours or actions collected into a logical unit that can be assigned to an individual or group",
+      "section": "5.53",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "An individual may take over multiple roles."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Service",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Way to provide value to customers through bringing about results that they want to achieve",
+      "section": "5.54",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "In the context of the FitSM standard series, when referring to services, usually IT  services are meant"
+        }
+      ]
     },
     {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "name": "Service Acceptance Criteria",
+      "aka": "SAC",
+      "description": "Criteria that must be fulfilled by the time a new or changed service is deployed and made available to customers / users",
+      "section": "5.55",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "SAC are defined when a new or changed service is designed, and they may be updated or refined during the development or transition phase. They may cover functional and non-functional aspects of the specific service to be deployed. SAC are part of the service design and transition package (SDTP)."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Service Catalogue",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Customer-facing list of all live services offered along with relevant information about these services",
+      "section": "5.56",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The service catalogue can be regarded as a filtered version of and customers’ view on the service portfolio."
+        }
+      ]
     },
     {
       "name": "",
