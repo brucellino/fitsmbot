@@ -198,32 +198,56 @@
       "notes": []
     },
     {
-      "name": "",
+      "name": "Document",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Information and its supporting medium",
+      "section": "5.19",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Examples of documents include policies, plans, process description, procedures, service level agreements, contracts or records of activities performed."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Effectiveness",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Extent to which goals and expectations are met",
+      "section": "5.20",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "In a management system, effectiveness is mostly measured against the defined goals of the processes that are subject to this system."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Efficiency",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Degree of ability to meet goals and expectations with minimum consumption of resources",
+      "section": "5.21",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "In a management system, efficiency is mostly considered in the context of the processes that are subject to this system."
+        },
+        {
+          "name": "Note 2",
+          "description": "Resources may be human, technical, informational or financial."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Escalation",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Change of responsibility for a case (such as an incident, service request, problem or change) or activity to another individual or group",
+      "section": "5.22",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "There are two basic types of escalation: Hierarchical escalation transfers responsibility (temporarily) to someone with a higher level of authority. Functional escalation transfers responsibility to someone with a different set of competencies or privileges required to handle the case or activity."
+        }
+      ]
     },
     {
       "name": "",
