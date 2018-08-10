@@ -583,66 +583,103 @@
       ]
     },
     {
-      "name": "",
+      "name": "Service component",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Logical part of a service that provides a function enabling or enhancing a service",
+      "section": "5.57",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "A service is usually composed of several service components."
+        },
+        {
+          "name": "Note 2",
+          "description": "A service component is usually built from one or more configuration items (CIs)"
+        },
+        {
+          "name": "Note 3",
+          "description": "Although a service component underlies one or more services, it usually does not create value for a customer alone and is therefore not a service by itself."
+        }
+      ]
+    },
+    {
+      "name": "Service Design and Transition Package",
+      "aka": "SDTP",
+      "description": "Entirety of plans for the design and transition of a specific new or changed service",
+      "section": "5.58",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "An SDTP should be produced for every new or changed service. It may consist of a number of documented plans and other relevant information, available in different formats, including a list of requirements and service acceptance criteria (SAC), a project plan, communication and training plans,  plans and specifications, resource plans, development and deployment schedules /timetables, etc."
+        }
+      ]
+    },
+    {
+      "name": "Service Level Agreement",
+      "aka": "SLA",
+      "description": "Documented agreement between a customer and service provider that specifies the service to  be provided and the service targets that define how it will be provided",
+      "section": "5.59",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Service Management",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Entirety of activities performed by a service provider to plan, deliver, operate and control services offered to customers",
+      "section": "5.60",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The activities carried out in the service management context should be directed by policies and structured and organised by processes and supporting procedures."
+        },
+        {
+          "name": "Note 2",
+          "description": "In the context of the FitSM standard series, when referring to service management, usually IT service management is meant."
+        }
+      ]
+    },
+    {
+      "name": "Service Management Plan",
+      "aka": "",
+      "description": "Overall plan for implementing and operating a service management system (SMS)",
+      "section": "5.61",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Service Management System",
+      "aka": "SMS",
+      "description": "Overall management system that controls and supports management of services within an organisation or federation",
+      "section": "5.62",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The SMS can be regarded as the entirety of interconnected policies, processes, procedures, roles, agreements, plans, related resources and other elements needed and used by a service provider to effectively manage the delivery of services to customers."
+        }
+      ]
+    },
+    {
+      "name": "Service Portfolio",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Internal list that details all the services offered by a service provider, including those in preparation, live and discontinued",
+      "section": "5.63",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "For each service, the service portfolio may include information such as its value proposition, target customer base, service description, relevant technical specifications, cost and price, risks to the service provider, service level packages offered, etc.."
+        }
+      ]
+    },
+    {
+      "name": "Service Provider",
+      "aka": "",
+      "description": "Organisation or federation (or part of an organisation or federation) that manages and delivers a service or services to customers",
+      "section": "5.64",
       "notes": []
     },
     {
-      "name": "",
+      "name": "Service Report",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
-    },
-    {
-      "name": "",
-      "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Report that details the performance of a service versus the service targets defined in service level agreements (SLAs) – often based on key performance indicators (KPIs).",
+      "section": "5.65",
       "notes": []
     },
     {
