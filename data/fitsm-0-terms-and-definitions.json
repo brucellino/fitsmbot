@@ -1,565 +1,661 @@
 {
   "title": "For the purpose of the FitSM family of standards, the following terms and definitions apply",
   "version": "2.4"
-  "terms": [{
+  "terms": [
+    {
       "name": "Accessibility of information",
+      "aka": "",
       "description": "Property of information being accessible and usable by an authorized party",
       "section": "5.1",
       "notes": []
     },
     {
       "name": "Activity",
+      "aka": "",
       "description": "Set of actions carried out within a process",
       "section": "5.2",
       "notes": []
     },
     {
       "name": "Assessment",
+      "aka": "",
       "description": "Set of actions to evaluate the capability level of a process or the overall maturity level of a management system.",
       "section": "5.3",
       "notes": []
     },
     {
       "name": "Audit",
+      "aka": "",
       "description": "Systematic, independent and documented process for obtaining audit evidence and evaluating it objectively to determine the extent to which the audit criteria are fulfilled",
       "section": "5.4",
       "notes": [{
           "name": "Note 1",
+          "aka": "",
           "description": "Audit evidence is typically based on documented information, information provided during an audit interview, and information gathered through observation."
         },
         {
           "name": "Note 2",
+          "aka": "",
           "description": "Audit criteria may be based on requirements from a management system (including policies, processes and  procedures), agreements (including service level agreements and underpinning agreements), contracts, standards or legislation."
         },
         {
           "name": "Note 3",
+          "aka": "",
           "description": "An audit may be an internal audit, if it is conducted under the direct responsibility of the organisation or federation that is subject to the audit, or an external audit, if it is conducted by an external party."
         },
         {
           "name": "Note 4",
+          "aka": "",
           "description": "Both internal and external audits should be conducted by skilled and experienced auditors, and auditors should not audit their own work or areas of responsibilities to ensure the impartiality of the results. "
         }
       ]
     },
     {
       "name": "Availability",
+      "aka": "",
       "description": "Ability of a service or service component to fulfil its intended function at a specific time or over a specific period of time.",
       "section": "5.5",
       "notes": []
     },
     {
       "name": "Capability Level",
+      "aka": "",
       "description": "Achieved level of effectiveness of an individual process or general aspect of management",
       "section": "5.6",
       "notes": []
     },
     {
       "name": "Capacity",
+      "aka": "",
       "description": "Maximum extent to which a certain element of the infrastructure (such as a configuration item) can be used",
       "section": "5.7",
       "notes": [{
         "name": "Note 1",
+        "aka": "",
         "description": "This might mean the total disk capacity or network bandwidth. It could also be the maximum transaction throughput of a system"
       }]
     },
     {
       "name": "Change",
+      "aka": "",
       "description": "Alteration (such as addition, removal, modification, replacement) of a configuration item (CI)",
       "section": "5.8",
       "notes": []
     },
     {
       "name": "Classification",
+      "aka": "",
       "description": "Assignment of   items to defined groups based on common attributes,  relations or other criteria",
       "section": "5.9",
       "notes": [{
           "name": "Note 1",
+          "aka": "",
           "description": "Items that are subject to classification may include documents, records (such as incident records or change records) services, configuration items (CIs), etc. \n
           Defined groups may include categories(such as incident categories or change categories) or priority levels.
           "
         },
         {
           "name": "Note 2",
+          "aka": "",
           "description": "The act of classification often comprises the application of more than one classification scheme. For instance, an incident record might be assigned to a technical incident category such as ‘software related ’, ‘network related’ , etc ., and also to a priority level like ‘low priority ’, ‘medium priority ’, etc. The assignment of various incidents , service requests , changes and problems to an affected CI is also a classification"
         },
         {
           "name": "Note 3",
+          "aka": "",
           "description": "Note 3  : Besides   the presentation and analysis of relationships, classification is often used as input   for controlling the workflow of a   process  , e.g. by assigning a   priority  level to an   incident"
         }
       ]
     },
     {
       "name": "Closure",
+      "aka": "",
       "description": "Final activity in a workflow of a process to indicate no further action is required for a specific case ",
       "section": "5.10",
-        "notes": [
-          {
-            "name": "Note 1",
-            "description": "Cases that are subject to closure may include incidents, problems, service requests or changes. The activity  of closure puts the connected record  (such as the incident record, problem record, service request  record  or change record) in its final status, usually called ‘closed'"
-          }
-        ]
+      "notes": [{
+        "name": "Note 1",
+        "aka": "",
+        "description": "Cases that are subject to closure may include incidents, problems, service requests or changes. The activity  of closure puts the connected record  (such as the incident record, problem record, service request  record  or change record) in its final status, usually called ‘closed'"
+      }]
     },
     {
       "name": "Competence",
+      "aka": "",
       "description": "Sum of
-      knowledge, skills and experience that an individual or group needs   to effectively take on a specific role",
+      knowledge,
+      skills and experience that an individual or group needs to effectively take on a specific role ",
       "section": "5.11",
       "notes": []
     },
     {
       "name": "Confidentiality of Information",
+      "aka": "",
       "description": "Property of information not being accessible to unauthorized parties",
       "section": "5.12",
       "notes": []
     },
     {
       "name": "Conformity",
+      "aka": "",
       "description": "Extent to which requirements are met in some context",
       "section": "5.13",
-      "notes": [
-        {
-          "name": "Note 1",
-          "description": "In the context of  FitSM, the term compliance is generally used as a synonym for conformity. However, sometimes conformity is used in the context of adherence to internal regulations and requirements  as defined by policies, processes  and procedures, while compliance is used in the context of adherence to external requirements, such as laws, standards and contracts"
-        }
-      ]
+      "notes": [{
+        "name": "Note 1",
+        "aka": "",
+        "description": "In the context of  FitSM, the term compliance is generally used as a synonym for conformity. However, sometimes conformity is used in the context of adherence to internal regulations and requirements  as defined by policies, processes  and procedures, while compliance is used in the context of adherence to external requirements, such as laws, standards and contracts"
+      }]
     },
     {
       "name": "Configuration",
+      "aka": "",
       "description": "State of a specified set of attributes, relationships and other relevant properties of one or more configuration items (CIs)",
       "section": "5.14",
-      "notes": [
-        {
-          "name": "Note 1",
-          "description": "The documented configuration of a number of CIs at a given point in time is called a configuration baseline, which is usually taken prior to the deployment of one or more changes to these CIs in the live environment"
-        }
-      ]
+      "notes": [{
+        "name": "Note 1",
+        "aka": "",
+        "description": "The documented configuration of a number of CIs at a given point in time is called a configuration baseline, which is usually taken prior to the deployment of one or more changes to these CIs in the live environment"
+      }]
     },
     {
-      "name": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "name": "Configuration Item",
+      "aka": "CI",
+      "description": "Element that contributes to the delivery of one or more services or service components, therefore requiring control of its configuration",
+      "section": "5.15",
+      "notes": [{
+        "name": "Note 1",
+        "aka": "",
+        "description": "CIs can vary widely, from technical components (e.g. computer hardware, network components, software) to non-technical items such as documents (e.g. service level agreements, manuals, license documentation)."
+      }]
     },
     {
-      "name": "",
+      "name": "Configuration management database",
+      "aka": "CMDB",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
     {
       "name": "",
+      "aka": "",
       "description": "",
       "section": "",
       "notes": []
     },
-    
+
   ]
 }
