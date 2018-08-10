@@ -169,22 +169,32 @@
     {
       "name": "Configuration management database",
       "aka": "CMDB",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Store for data about configuration items (CIs)",
+      "section": "5.16",
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "A CMDB is not necessarily a single database covering all configuration items (CIs). It may rather be composed of multiple physical data stores."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Continuity",
       "aka": "",
-      "description": "",
-      "section": "",
-      "notes": []
+      "description": "Property of a service to maintain all or parts of its functionality, even in exceptional circumstances",
+      "section": "5.17",
+      "notes": [
+        {
+          "name":  "Note 1",
+          "description": "Exceptional circumstances include emergencies, crises or disasters which affect the ability to provide services over extended periods of time."
+        }
+      ]
     },
     {
-      "name": "",
+      "name": "Customer",
       "aka": "",
-      "description": "",
-      "section": "",
+      "description": "Organisation or part of an organisation that commissions a service provider in order to receive one or more services",
+      "section": "5.18",
       "notes": []
     },
     {
