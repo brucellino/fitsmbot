@@ -29,7 +29,8 @@
       "aka": "",
       "description": "Systematic, independent and documented process for obtaining audit evidence and evaluating it objectively to determine the extent to which the audit criteria are fulfilled",
       "section": "5.4",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "aka": "",
           "description": "Audit evidence is typically based on documented information, information provided during an audit interview, and information gathered through observation."
@@ -91,9 +92,7 @@
       "notes": [{
           "name": "Note 1",
           "aka": "",
-          "description": "Items that are subject to classification may include documents, records (such as incident records or change records) services, configuration items (CIs), etc. \n
-          Defined groups may include categories(such as incident categories or change categories) or priority levels.
-          "
+          "description": "Items that are subject to classification may include documents, records (such as incident records or change records) services, configuration items (CIs), etc. Defined groups may include categories(such as incident categories or change categories) or priority levels."
         },
         {
           "name": "Note 2",
@@ -121,9 +120,7 @@
     {
       "name": "Competence",
       "aka": "",
-      "description": "Sum of
-      knowledge,
-      skills and experience that an individual or group needs to effectively take on a specific role ",
+      "description": "Sum of knowledge, skills and experience that an individual or group needs to effectively  take on a specific role ",
       "section": "5.11",
       "notes": []
     },
@@ -371,8 +368,7 @@
     {
       "name": "Management Review",
       "aka": "",
-      "description": "Periodic evaluation of the suitability, maturity and efficiency of the entire management system by its accountable owner(s), from which opportunities for improvement are identified and follow-up
-      actions are determined",
+      "description": "Periodic evaluation of the suitability, maturity and efficiency of the entire management system by its accountable owner(s), from which opportunities for improvement are identified and follow-up actions are determined",
       "section": "5.37",
       "notes": [
         {
