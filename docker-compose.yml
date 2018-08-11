@@ -11,6 +11,4 @@ services:
     depends_on:
       - redis
   redis:
-    image: quay.io/smile/redis
-    expose:
-      - 8080
+    image: "redis:alpine"
