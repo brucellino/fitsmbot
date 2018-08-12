@@ -1,0 +1,97 @@
+{
+  "title": "FitSM Process Model",
+  "version": "2.4",
+  "sections": [
+    {"name": "Offer and Agree", "colour": "c0504d"},
+    {"name": "Plan and Ensure", "colour": "bf6f4f"},
+    {"name": "Control and Deploy", "colour": "be8d52"},
+    {"name": "Resolve and Prevent", "colour": "bda954"},
+    {"name": "Report and Improve", "colour": "b5bc57"},
+    {"name": "Protect and Secure", "colour": "9bbb59"}
+  ],
+  "processes": [
+    {
+      "title": "SPM",
+      "name": "Service portfolio management",
+      "objective": "To define and maintain a service portfolio",
+      "section": 1
+    },
+   {
+     "title": "SLM",
+      "name": "Service Level Management",
+      "objective": "To maintain a service catalogue, and to define, agree and monitor service levels with customers by establishing meaningful service level agreements (SLAs) and supportive operational level (OLAs) and underpinning agreements (UAs) with suppliers.",
+      "section": 1
+    },
+    {
+      "title": "CRM",
+      "name": "Customer Relationship Management",
+      "objective": "To establish and maintain a good relationship with customers receiving services",
+      "section": 1
+    },
+    {
+      "title": "SUPPM",
+      "name": "Supplier Relationship Management",
+      "objective": "To establish and maintain a healthy relationship with suppliers supporting the service provider in delivering services to customers, and monitor their performance",
+      "section": 2
+    },
+    {
+      "title": "SACM",
+      "name": "Service Availability and Capacity Management",
+      "objective": "To ensure sufficient service availability to meet agreed requirements and adequate service ","section": 2
+    },
+    {
+      "title": "CAPM",
+      "name": "Capacity Management",
+      "objective": "To ensure sufficient capacities are provided to meet agreed service capacity and performance requirements",
+      "section": 2
+    },
+    {
+      "title": "CONFM",
+      "name": "Configuraiton Management",
+      "objective": "To provide and maintain a logical model of all configuration items (CIs) and their relationships and dependencies",
+      "section": 3
+    },
+    {
+      "title": "CHM",
+      "name": "Change Management",
+      "objective": "To ensure changes to CIs are planned, approved, implemented and reviewed in a controlled to avoid adverse impact of changes to services or the customers receiving services",
+      "section": 3
+    },
+    {
+      "title": "RDM",
+      "name": "Release and Deployment Management",
+      "objective": "To bundle changes of one or more CIs to releases, so that these changes can be tested  deployed to the live environment together",
+      "section": 3
+    },
+    {
+      "title": "ISRM",
+      "name": "Incident and Service Request Management",
+      "objective": "To restore normal / agreed service operation within the agreed time after the occurrence of an incident, and to respond to user service requests",
+      "section": 4
+    },
+    {
+      "title": "PM",
+      "name": "Problem Management",
+      "objective": "To investigate the root causes of (recurring) incidents in order to avoid future recurrence of incidents by resolving the underlying cause, or to ensure workarounds or temporary fixes are available",
+      "section": 4
+    },
+    {
+      "title": "SRM",
+      "name": "Service Reporting Management",
+      "objective": "To specify all service reports and ensure they are produced according to specifications in a timely manner to support decision-making",
+      "section": 5
+    },
+    {
+      "title": "CSI",
+      "name": "Continual Service Improvement Management",
+      "objective": "To identify, prioritize, plan, implement and review improvements to services and service management",
+      "section": 5
+    },  
+    {
+      "title": "ISM",
+      "name": "Information Security Management",
+      "objective": "To manage information security effectively through all activities performed to deliver and manage services, so that the confidentiality, integrity and accessibility of relevant information are preserved",
+      "section": 6
+    }
+  ]
+}
