@@ -1,0 +1,151 @@
+{
+  "title": "FitSM-2",
+  "name": "General Requirements",
+  "requirements": [{
+      "title": "GR1",
+      "category": "Top Management Commitment & Responsibility",
+      "requirements": [{
+          "title": "GR1.1",
+          "name": "Top management of the organisation(s) involved in the delivery of services shall show evidence that they are committed to planning, implementing, operating, monitoring, reviewing, and improving the service management system (SMS) and services.",
+          "items": [
+            "Assign one individual to be accountable for the overall SMS with sufficient authority to exercise this role",
+            "Define and communicate goals",
+            "Define a general service management policy",
+            "Conduct management reviews at planned intervals"
+          ]
+        },
+        {
+          "title": "GR1.2",
+          "name": "The service management policy shall include",
+          "items": [
+            "A commitment to fulfil customer service requirements",
+            "A commitment to a service-oriented approach",
+            "A commitment to a process approach",
+            "A commitment to continual improvement",
+            "Overall service management goals"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GR2",
+      "category": "Documentation",
+      "requirements": [{
+          "title": "GR2.1",
+          "name": "The overall SMS shall be documented to support effective planning. This documentation shall include",
+          "items": [
+            "Service management scope statement (see GR3)",
+            "Service management policy (see GR1)",
+            "Service management plan and related plans (see GR4)"
+          ]
+        },
+        {
+          "title": "GR2.2",
+          "name": "Documented definitions of all service management processes (see PR1-PR14) shall be created and maintained. Each of these definitions shall at least cover or reference:",
+          "items": [
+            "Description of the goals of the process",
+            "Description of the inputs, activities and outputs of the process",
+            "Description of process-specific roles and responsibilities",
+            "Description of interfaces to other processes",
+            "Related process-specific policies as applicable",
+            "Related process- and activity-specific procedures as required"
+          ]
+        },
+        {
+          "title": "GR2.3",
+          "name": "The outputs of all service management processes (see PR1-PR14) shall be documented, and the execution of key activities of these processes recorded.",
+          "items": []
+        },
+        {
+          "title": "GR2.4",
+          "name": "Documentation shall be controlled, addressing the following activities as applicable",
+          "items": [
+            "Creation and approval",
+            "Communication and distribution",
+            "Review",
+            "Versioning and change tracking"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GR3",
+      "category": "Defining The Scope Of Service Management",
+      "requirements": [{
+        "title": "GR3.1",
+        "name": "The scope of the SMS shall be defined and a scope statement created.",
+        "items": []
+      }]
+    },
+    {
+      "title": "GR4",
+      "category": "Planning Service Management (PLAN)",
+      "requirements": [{
+          "title": "GR4.1",
+          "name": "A service management plan shall be created and maintained.",
+          "items": []
+        },
+        {
+          "title": "GR4.2",
+          "name": "The service management plan shall at minimum include or reference:",
+          "items": [
+            "Goals and timing of implementing the SMS and the related processes",
+            "Overall roles and responsibilities",
+            "Required training and awareness activities",
+            "Required technology (tools) to support the SMS"
+          ]
+        },
+        {
+          "title": "GR4.3",
+          "name": "Any plan shall be aligned to other plans and the overall service management plan.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "GR5",
+      "category": "Implementing Service Management (DO)",
+      "requirements": [{
+          "title": "GR5.1",
+          "name": "The service management plan shall be implemented.",
+          "items": []
+        },
+        {
+          "title": "GR5.2",
+          "name": "Within the scope of the SMS, the defined service management processes shall be followed in practice, and their application, together with the adherence to related policies and procedures, shall be enforced.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "GR6",
+      "name": "Monitoring And Reviewing Service Management (CHECK)",
+      "requirements": [{
+          "title": "GR6.1",
+          "name": "The effectiveness and performance of the SMS and its service management processes shall be measured and evaluated based on suitable key performance indicators in support of defined or agreed targets.",
+          "items": []
+        },
+        {
+          "title": "GR6.2",
+          "name": "Assessments and audits of the SMS shall be conducted to evaluate the level of maturity and compliance.",
+          "items": []
+        }
+      ]
+    },
+    {
+      "title": "GR7",
+      "name": "Continually Improving Service Management (ACT)",
+      "requirements": [{
+          "title": "GR7.1",
+          "name": "Nonconformities and deviations from targets shall be identified and corrective actions shall be taken to prevent them from recurring.",
+          "items": []
+        },
+        {
+          "title": "GR7.2",
+          "name": "Improvements shall be planned and implemented according to the Continual Service Improvement Management process (see PR14).",
+          "items": []
+        }
+      ]
+    }
+  ]
+}
