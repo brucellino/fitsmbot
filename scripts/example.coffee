@@ -6,8 +6,9 @@
 #   wouldn't be useful and amusing enough for day to day huboting.
 #   Uncomment the ones you want to try and experiment with.
 #
-#   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
-{WebClient} = require "@slack/client"
+#   These are from the scripting documentation:
+# https://github.com/github/hubot/blob/master/docs/scripting.md
+{ WebClient } = require "@slack/client"
 require "@slack/client"
 
 module.exports = (robot) ->
@@ -16,13 +17,12 @@ module.exports = (robot) ->
     res.reply "There is no try, there is only do"
     if res.message.type == "added" and res.message.item.type == "message"
       # res.messsage.reaction is the emoji alias for the reaction Hubot just heard
-      web.reactions.add
+      web.reactions.add {
         name: "thumbsup",
         channel: res.message.item.channel,
         timestamp: res.message.item.ts
-
-  robot.respond /what is fitsm/i, (res) ->
-    res.reply "FitSM is a lightweight family of standards for IT Service Management"
+      }
+  
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   
