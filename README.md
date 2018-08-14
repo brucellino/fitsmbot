@@ -19,6 +19,11 @@ FitSM bot should know everything about the FitSM standard:
 These are kept in JSON in the `data` directory.
 The schema of the data attempts to follow the standard itself.
 
+
+## The Hubot Slack SDK
+
+For interacting with Slack, see the [docs](https://slackapi.github.io/hubot-slack/)
+
 ### Running fitsmbot Locally
 
 You can test your hubot by running the following, however some plugins will not
@@ -41,7 +46,23 @@ Then you can interact with fitsmbot by typing `fitsmbot help`.
     fitsmbot help - Displays all of the help commands that fitsmbot knows about.
     ...
 
+### Deploying with the Slack adapter
+
+Running the robot locally isn't of much use if you want to deploy it.
+Deployment can be done on any Docker-enabled host, with the handy docker-compose file provided: `docker-compose up`
+This uses dotenv files for reading the variables, as discussed [below][#configuration] including the slack token for connecting to the Slack API.
+Before running with the Slack adator, you need a token, which can be generated after creating the bot in the [Slack apps page](https://api.slack.com/apps) - see also [the Slack Hubot SDK documentation](https://slackapi.github.io/hubot-slack/#getting-a-slack-token)
+
+
+
 ### Configuration
+
+Hubot requires configuration, with most variables set in the environment.
+There are two types of variables:
+ - public variables: variables that can be stored in change control.
+ - secret variables: variables which are _secret_ and shold not be stored in change control.
+
+Secrets can be set on the command line when 
 
 
 ### Scripting
