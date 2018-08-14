@@ -1,0 +1,54 @@
+{
+  "title": "FitSM-1 PR",
+  "name": "FitSM-1 Process-Specific Requirements",
+  "requirements": [
+    {
+      "name": "Service Portfolio Management",
+      "aka": "SPM",
+      "requirements":  [
+        {
+          "name": "PR1.1",
+          "description": "A service portfolio shall be maintained. All services shall be specified as part of the service portfolio."
+        },
+        {
+          "name": "PR1.2",
+          "description": "Design and transition of new or changed services shall be planned."
+        },
+        {
+          "name": "PR1.3",
+          "description": "Plans for the design and transition of new or changed services shall consider timescales, responsibilities, new or changed technology, communication and service acceptance criteria."
+        },
+        {
+          "name": "PR1.4",
+          "description": "The organisational structure supporting the delivery of services shall be identified, including a potential federation structure as well as contact points for all parties involved."
+        }
+      ]
+    },
+    {
+      "name": "Service Level Management",
+      "aka": "SLM",
+      "requirements": [
+        {
+          "name": "PR2.1",
+          "description": "A service catalogue shall be maintained."
+        },
+        {
+          "name": "PR2.2",
+          "description": "For all services delivered to customers, SLAs shall be in place."
+        },
+        {
+          "name": "PR2.3",
+          "description": "SLAs shall be reviewed at planned intervals."
+        },
+         {
+           "name": "PR2.4",
+           "description": "Service performance shall be evaluated against service targets defined in SLAs."
+         },
+         {
+           "name": "PR2.5",
+           "description": "For supporting services or service components provided by federation members or groups belonging to the same organisation as the service provider or external suppliers, OLAs and UAs shall be agreed."
+         }
+      ]
+    }
+  ]
+}
