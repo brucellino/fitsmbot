@@ -16,19 +16,19 @@
     { "name": "Service Catalogue", "aka": "SC", "singleton": true, "type": "db"},
     { "name": "Service", "aka": "Service", "singleton": false, "type": "service"},
     { "name": "Service Report", "aka": "ServiceRep", "singleton": false, "type": "record"},
-    { "name": "Service Request", "aka": "ServiceReq", "singleton": false, "type": "record"} 
+    { "name": "Service Request", "aka": "ServiceReq", "singleton": false, "type": "record"}, 
     { "name": "Customer", "aka": "Customer", "singleton": false, "type": "human"},
     { "name": "Customer Database", "aka": "CustDB", "singleton": true, "type": "db"},
     { "name": "Customer Requirement", "aka": "CustReq", "singleton": false, "type": "record"},
     { "name": "Supplier", "aka": "Supplier", "singleton": false, "type": "human"},
-    { "name": "Supplier Database", "aka": "SuppDB", "singleton": true, "type": "db"}
+    { "name": "Supplier Database", "aka": "SuppDB", "singleton": true, "type": "db"},
     { "name": "Service Level Agreement", "aka": "SLA", "singleton": false, "type": "record"},
     { "name": "Operating Level Agreement", "aka": "OLA", "singleton": false, "type": "record"},
     { "name": "Availability and Continuity Plan", "aka": "AvCoPlan", "singleton": false, "type": "record"},
     { "name": "Capacity Plan", "aka": "CapPlan", "singleton": false, "type": "record"},
     { "name": "Policy", "aka": "Policy", "singleton": false, "type": "record"},
     { "name": "Incident Records", "aka": "IncRec", "singleton": false, "type": "record"},
-    { "name": "Problem Record": "aka": "ProbRec": "singleton": false, "type": "record"},
+    { "name": "Problem Record", "aka": "ProbRec", "singleton": false, "type": "record"},
     { "name": "Known Error Database", "aka": "KEDB", "singleton": true, "type": "db"},
     { "name": "Request for Change", "aka": "RfC", "singleton": false, "type": "record"},
     { "name": "Configuration Management Database", "aka": "CMDB", "singleton": false, "type": "db"},
@@ -138,7 +138,7 @@
       "objective": "To investigate the root causes of (recurring) incidents in order to avoid future recurrence of incidents by resolving the underlying cause, or to ensure workarounds or temporary fixes are available",
       "section": 4,
       "inputs": [ { "aka": "PM"}, { "aka": "ServiceReq"}, { "aka": "KEDB"}],
-      "outputs": [ { "aka": "KEDB", "aka": "ProbRec"}]
+      "outputs": [ { "aka": "KEDB"}, {"aka": "ProbRec"}]
     },
     {
       "title": "SRM",
