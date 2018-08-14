@@ -1,13 +1,16 @@
 {
-  "name": "fitsmbot",
+  "name": "Fitty I.T. McMaster",
+  "alias": "FitBot",
   "version": "0.0.0",
   "private": true,
   "author": "bruce.becker@egi.eu",
   "description": "A bot who knows FitSM kung-fu",
+  "scripts": {
+    "test": "mocha --require coffeescript/register tests/*"
+  },
   "dependencies": {
-    "coffee-script": "^1.12.7",
     "coffeescript": "^1.12.7",
-    "hubot": "^3.1.1",
+    "hubot": "^2.0.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-help": "^0.2.2",
     "hubot-redis-brain": "0.0.4",
@@ -17,5 +20,20 @@
   },
   "engines": {
     "node": "10.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EGI-Foundation/fitsmbot"
+  },
+  "bugs": {
+    "url": "https://github.com/EGI-Foundation/fitsmbot/issues"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "coffeescript": "^1.12.7",
+    "coffeelint": "^2.1.0",
+    "hubot-test-helper": "^0.0.6",
+    "mocha": "^2.2.5",
+    "sinon": "^6.1.5"
   }
 }
