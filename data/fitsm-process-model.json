@@ -9,12 +9,14 @@
     {"name": "Report and Improve", "colour": "b5bc57"},
     {"name": "Protect and Secure", "colour": "9bbb59"}
   ],
+  "themes": ["SPD", "SOC"],
   "entityTypes": ["db","record","service","human"],
   "entities": [
     { "name": "Service Portfolio", "aka": "SP", "singleton": true, "type": "db"},
     { "name": "Service Catalogue", "aka": "SC", "singleton": true, "type": "db"},
     { "name": "Service", "aka": "Service", "singleton": false, "type": "service"},
-    { "name": "Service Report", "aka": "ServiceRep", "singleton": false, "type": "report"},
+    { "name": "Service Report", "aka": "ServiceRep", "singleton": false, "type": "record"},
+    { "name": "Service Request", "aka": "ServiceReq", "singleton": false, "type": "record"} 
     { "name": "Customer", "aka": "Customer", "singleton": false, "type": "human"},
     { "name": "Customer Database", "aka": "CustDB", "singleton": true, "type": "db"},
     { "name": "Customer Requirement", "aka": "CustReq", "singleton": false, "type": "record"},
@@ -26,16 +28,19 @@
     { "name": "Capacity Plan", "aka": "CapPlan", "singleton": false, "type": "record"},
     { "name": "Policy", "aka": "Policy", "singleton": false, "type": "record"},
     { "name": "Incident Records", "aka": "IncRec", "singleton": false, "type": "record"},
+    { "name": "Problem Record": "aka": "ProbRec": "singleton": false, "type": "record"},
     { "name": "Known Error Database", "aka": "KEDB", "singleton": true, "type": "db"},
     { "name": "Request for Change", "aka": "RfC", "singleton": false, "type": "record"},
     { "name": "Configuration Management Database", "aka": "CMDB", "singleton": false, "type": "db"},
+    { "name": "Configuration Information", "aka": "ConfInfo", "singleton": false, "type": "db"},
     { "name": "Release Record", "aka": "RelRec", "singleton": false, "type": "record"},
-    { "name": "Approved Change", "aka": "YesChange", "singleton": false, "type": "record"},
+    { "name": "Approved Change", "aka": "YesChange", "singleton": false, "type": "record"}
   ],
   "processes": [
     {
       "title": "SPM",
       "name": "Service portfolio management",
+      "theme": "SPD",
       "objective": "To define and maintain a service portfolio",
       "section": 1,
       "outputs": [],
@@ -46,6 +51,7 @@
     {
       "title": "SLM",
       "name": "Service Level Management",
+      "theme": "SPD",
       "objective": "To maintain a service catalogue, and to define, agree and monitor service levels with customers by establishing meaningful service level agreements (SLAs) and supportive operational level (OLAs) and underpinning agreements (UAs) with suppliers.",
       "section": 1,
       "inputs": [ {"aka": "SP"}],
@@ -72,6 +78,7 @@
     {
       "title": "SACM",
       "name": "Service Availability and Capacity Management",
+      "theme": "SPD",
       "objective": "To ensure sufficient service availability to meet agreed requirements and adequate service ",
       "section": 2,
       "inputs": [ { "aka": "SLA"}],
@@ -80,6 +87,7 @@
     {
       "title": "CAPM",
       "name": "Capacity Management",
+      "theme": "SPD",
       "objective": "To ensure sufficient capacities are provided to meet agreed service capacity and performance requirements",
       "section": 2,
       "inputs": [ { "aka": "SLA"}],
@@ -89,6 +97,7 @@
     {
       "title": "CONFM",
       "name": "Configuraiton Management",
+      "theme": "SOC",
       "objective": "To provide and maintain a logical model of all configuration items (CIs) and their relationships and dependencies",
       "section": 3,
       "inputs": [ { "aka": "CHM"}],
@@ -97,6 +106,7 @@
     {
       "title": "CHM",
       "name": "Change Management",
+      "theme": "SOC",
       "objective": "To ensure changes to CIs are planned, approved, implemented and reviewed in a controlled to avoid adverse impact of changes to services or the customers receiving services",
       "section": 3,
       "inputs": [ { "aka": "RfC"}, { "aka": "CONFM"}],
@@ -105,6 +115,7 @@
     {
       "title": "RDM",
       "name": "Release and Deployment Management",
+      "theme": "SOC",
       "objective": "To bundle changes of one or more CIs to releases, so that these changes can be tested  deployed to the live environment together",
       "section": 3,
       "inputs": [ { "aka": "YesChange"} ],
@@ -114,22 +125,25 @@
     {
       "title": "ISRM",
       "name": "Incident and Service Request Management",
+      "theme": "SOC",
       "objective": "To restore normal / agreed service operation within the agreed time after the occurrence of an incident, and to respond to user service requests",
       "section": 4,
-      "inputs": [ { "aka": "KEDB"}],
-      "outputs": [ { "aka": "IncRec"}]
+      "inputs": [ { "aka": "KEDB"}, { "aka": "CMDB"} ],
+      "outputs": [ { "aka": "IncRec"}, {"aka": "ServiceReq"}, {"aka": "RfC"}]
     },
     {
       "title": "PM",
       "name": "Problem Management",
+      "theme": "SOC",
       "objective": "To investigate the root causes of (recurring) incidents in order to avoid future recurrence of incidents by resolving the underlying cause, or to ensure workarounds or temporary fixes are available",
       "section": 4,
-      "inputs": [ { "aka": "PM"}],
-      "outputs": [ { "aka": "KEDB"}]
+      "inputs": [ { "aka": "PM"}, { "aka": "ServiceReq"}, { "aka": "KEDB"}],
+      "outputs": [ { "aka": "KEDB", "aka": "ProbRec"}]
     },
     {
       "title": "SRM",
       "name": "Service Reporting Management",
+      "theme": "SPD",
       "objective": "To specify all service reports and ensure they are produced according to specifications in a timely manner to support decision-making",
       "section": 5,
       "inputs": [ {"aka": "SLA"} ],
@@ -146,6 +160,7 @@
     {
       "title": "ISM",
       "name": "Information Security Management",
+      "theme": "SPD",
       "objective": "To manage information security effectively through all activities performed to deliver and manage services, so that the confidentiality, integrity and accessibility of relevant information are preserved",
       "section": 6,
       "inputs": [ {"aka": "SLA"}],
