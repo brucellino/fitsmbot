@@ -9,19 +9,26 @@
 #   These are from the scripting documentation:
 # https://github.com/github/hubot/blob/master/docs/scripting.md
 { WebClient } = require "@slack/client"
-require "@slack/client"
 
 module.exports = (robot) ->
   web = new WebClient robot.adapter.options.token
+  
   robot.hear /(will try|ll try)/i, (res) ->
     res.reply "There is no try, there is only do"
-    if res.message.type == "added" and res.message.item.type == "message"
-      # res.messsage.reaction is the emoji alias for the reaction Hubot just heard
-      web.reactions.add {
-        name: "thumbsup",
-        channel: res.message.item.channel,
-        timestamp: res.message.item.ts
-      }
+
+  robot.hear /test/i, (res) ->
+    web.api.test()
+      .then () -> res.send "Your connection to the Slack API is working!"
+      .catch (error) -> res.send "Your connection to the Slack API failed :("
+  
+  robot.hear /react/i, (res) ->
+    console.log res.message.room
+    console.log res.message.id
+    web.reactions.add {
+      name: 'thumbsup',
+      channel: res.message.room,
+      timestamp: res.message.id
+    }
   
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
@@ -86,20 +93,21 @@ module.exports = (robot) ->
   #     res.send "Not annoying you right now, am I?"
   
   
-  # robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
-  #   room   = req.params.room
-  #   data   = JSON.parse req.body.payload
-  #   secret = data.secret
+  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
+    room   = req.params.room
+    data   = JSON.parse req.body.payload
+    secret = data.secret
   
-  #   robot.messageRoom room, "I have a secret: #{secret}"
+    robot.messageRoom room, "I have a secret: #{secret}"
   
-  #   res.send 'OK'
+    res.send 'OK'
   
-  # robot.error (err, res) ->
-  #   robot.logger.error "DOES NOT COMPUTE"
+  robot.error (err, res) ->
+    robot.logger.error "DOES NOT COMPUTE"
   
-  #   if res?
-  #     res.reply "DOES NOT COMPUTE"
+    if res?
+      res.reply "DOES NOT COMPUTE"
+      res.reply err
   
   # robot.respond /have a soda/i, (res) ->
   #   # Get number of sodas had (coerced to a number).
