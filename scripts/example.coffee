@@ -21,15 +21,21 @@ module.exports = (robot) ->
       .then () -> res.send "Your connection to the Slack API is working!"
       .catch (error) -> res.send "Your connection to the Slack API failed :("
   
-  robot.hear /react/i, (res) ->
+  robot.hear /that('s|is) cool/i, (res) ->
     console.log res.message.room
     console.log res.message.id
-    web.reactions.add {
-      name: 'thumbsup',
-      channel: res.message.room,
-      timestamp: res.message.id
-    }
-  
+    reaction = { name: "thumbsup", channel: res.message.room, timestamp: res.message.id}
+    console.log reaction
+    web.reactions.add reaction
+
+  robot.hear /badger/i, (res) ->
+    if res.message.thread_ts?
+      # The incoming message was inside a thread, responding normally will continue the thread
+      res.send "Did someone say BADGER?"
+    else
+      # The incoming message was not inside a thread, so lets respond by creating a new thread
+      res.message.thread_ts = res.message.rawMessage.ts
+      res.send "Slight digression, we need to talk about these BADGERS"  
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   
