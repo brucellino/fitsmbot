@@ -2,7 +2,10 @@ language: node_js
 node_js: 10.8.0
 env:
   - DOCKER_COMPOSE_VERSION=1.4.2
-
+addons:
+  apt:
+    packages:
+    - jq
 before_install:
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
@@ -13,7 +16,7 @@ install:
 before_script:
 script:
   # validate json
-  - for data in `find data -name "*.json"` ; do jq . $file >/dev/null ; done
+  - for data in `find data -name "*.json"` ; do jq . $data >/dev/null ; done
   - npm run test
 after_script:
   - docker-compose build
