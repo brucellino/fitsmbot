@@ -12,11 +12,14 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 install:
+  - npm install -g coffeelint
   - npm install --save
 before_script:
+  - which coffeelint
 script:
   # validate json
   - for data in `find data -name "*.json"` ; do jq . $data >/dev/null ; done
-  - npm run test
+  - coffeelint scripts
+  # - npm run test
 after_script:
   - docker-compose build
