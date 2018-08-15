@@ -8,6 +8,12 @@ module.exports = (robot) ->
   
   robot.respond /^.*improvement.*/i, (res) ->
     res.send "I am but a bot - please help me improve by opening a ticket at https://github.com/EGI-Foundation/fitsmbot/issues/new"
+  
+  # open an issue
+  robot.respond /report(.*)/i, (res) ->
+    issue_text = res.match[1]
+    console.log "github token is" + process.env.HUBOT_GITHUB_TOKEN
+    
 
   robot.respond /categories/i, (res) ->
     robot.http(process.env.DISCOURSE_API_URL + '/categories.json').get() (err, response, body) ->

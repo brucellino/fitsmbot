@@ -35,7 +35,7 @@ module.exports = (robot) ->
     else
       # The incoming message was not inside a thread, so lets respond by creating a new thread
       res.message.thread_ts = res.message.rawMessage.ts
-      res.send "Slight digression, we need to talk about these BADGERS"  
+      res.send "Slight digression, we need to talk about these BADGERS"
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   
@@ -148,4 +148,4 @@ module.exports = (robot) ->
 
     robot.messageRoom room, "message from github for #{request.params.repo} "
 
-    respond.send 'OK'
+    robot.send 'OK'
