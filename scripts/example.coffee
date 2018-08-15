@@ -130,3 +130,22 @@ module.exports = (robot) ->
   # robot.respond /sleep it off/i, (res) ->
   #   robot.brain.set 'totalSodas', 0
   #   res.reply 'zzzzz'
+
+  # the expected value of :room is going to vary by adapter, it might be a numeric id, name, token, or some other value
+  robot.router.post '/hubot/chatsecrets/:room', (request, response) ->
+    room   = request.params.room
+    data   = if request.body.payload? then JSON.parse request.body.payload else request.body
+    secret = data.secret
+
+    robot.messageRoom room, "I have a secret: #{secret}"
+
+    response.send 'OK'
+
+  robot.router.post '/hubot/github/:repo', (request, response) ->
+    room = 'general'
+    data = if request.body.payload? then JSON.parse request.body.payload else request.body
+    console.log data
+
+    robot.messageRoom room, "message from github for #{request.params.repo} "
+
+    respond.send 'OK'

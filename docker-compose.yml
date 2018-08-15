@@ -12,3 +12,6 @@ services:
       - redis
   redis:
     image: "redis:alpine"
+    command: ["redis-server","--appendonly","yes"]
+    volumes:
+      - "./brain:/data"

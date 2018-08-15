@@ -2,6 +2,8 @@
 # This will help people learn and remember the vocabulary and terms of the
 # FitSM standard
 
+
+
 {WebClient} = require "@slack/client"
 
 module.exports = (robot) ->
@@ -23,7 +25,8 @@ module.exports = (robot) ->
   fitsm_general_requirements = require general_requirements_file
   fitsm_process_requirements = require process_requirements_file
   
-  robot.respond /help fitsm/i, (res) ->
+  robot.respond /help/i, (res) ->
+    # could turn this into a message with attachments and formatting
     res.send "Hi :wave: I am #{robot.brain.get('name')}, but you can call me #{robot.brain.get('alias')}"
     res.send "I was written by #{robot.brain.get('author')}, who called me #{robot.brain.get('description')}"
     res.send "I know fitsm! Ask me about FitSM, the fittest of all ITSM standards."
