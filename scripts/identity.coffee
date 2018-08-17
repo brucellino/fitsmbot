@@ -41,7 +41,13 @@ module.exports = (robot) ->
     console.log "github token is" + process.env.HUBOT_GITHUB_TOKEN
   
   # be nice
-  no_stress = ["sure!", "sure thing", "no stress", "don't mention it", "all in a day's work", "any time buddy"]
+  no_stress = [
+    "sure!",
+    "sure thing",
+    "no stress",
+    "don't mention it",
+    "all in a day's work",
+     "any time buddy"]
   robot.hear /thanks/i, (res) ->
     res.send res.random no_stress
   robot.respond /not you.*/i, (res) ->
