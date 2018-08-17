@@ -37,8 +37,9 @@
 inspect = require('util').inspect
 
 module.exports = (robot) ->
-  console.log process.env.IMGFLIP_API_USERNAME
-  console.log process.env.IMGFLIP_API_PASSWORD
+  
+  robot.brain.data.send_memes = true
+
   unless robot.brain.data.imgflip_memes?
     robot.brain.data.imgflip_memes = [
       {
@@ -161,5 +162,5 @@ generateMeme = (msg, template_id, text0, text1) ->
     if not success
       msg.reply "Imgflip API request failed: #{errorMessage}"
       return
-
-    msg.send result.data.url
+    if robot.brain.data.sendmemes != true
+      msg.send result.data.url
