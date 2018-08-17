@@ -1,7 +1,8 @@
 {
   "title": "FitSM-1 GR",
   "name": "FitSM-1 : General Requirements",
-  "requirements": [{
+  "requirements": [
+    {
       "title": "GR1",
       "category": "Top Management Commitment & Responsibility",
       "requirements": [{
@@ -105,7 +106,8 @@
     {
       "title": "GR5",
       "category": "Implementing Service Management (DO)",
-      "requirements": [{
+      "requirements": [
+        {
           "title": "GR5.1",
           "name": "The service management plan shall be implemented.",
           "items": []
@@ -119,8 +121,9 @@
     },
     {
       "title": "GR6",
-      "name": "Monitoring And Reviewing Service Management (CHECK)",
-      "requirements": [{
+      "category": "Monitoring And Reviewing Service Management (CHECK)",
+      "requirements": [
+        {
           "title": "GR6.1",
           "name": "The effectiveness and performance of the SMS and its service management processes shall be measured and evaluated based on suitable key performance indicators in support of defined or agreed targets.",
           "items": []
@@ -134,7 +137,7 @@
     },
     {
       "title": "GR7",
-      "name": "Continually Improving Service Management (ACT)",
+      "category": "Continually Improving Service Management (ACT)",
       "requirements": [{
           "title": "GR7.1",
           "name": "Nonconformities and deviations from targets shall be identified and corrective actions shall be taken to prevent them from recurring.",
