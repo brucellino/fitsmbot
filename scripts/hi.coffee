@@ -17,5 +17,14 @@
 #   @brucellino
 
 module.exports = (robot) ->
-  robot.respond /.*hi.*$/i, (msg) ->
-    msg.reply('hi :wave:')
+  robot.respond /.*(hi|hello|bonjour|buongiorno|ciao|salut|sup|hey|yo).*$/i, (msg) ->
+    greetings = [
+      "howdy :face_with_cowboy_hat:",
+      "yo",
+      "hey",
+      "hi :wave:",
+      "hey",
+      "hidyho",
+      "hey buuuuudy"
+    ]
+    msg.reply msg.random greetings
