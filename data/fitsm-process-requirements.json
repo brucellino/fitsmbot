@@ -97,6 +97,28 @@
           "description": "Availability of services and service components shall be monitored."
         }
       ]
+    },
+    {
+      "name": "Capacity Management",
+      "aka": "CAPM",
+      "requirements": [
+        {
+          "name": "PR5.1",
+          "description": "Service capacity and performance requirements shall be identified taking into consideration SLAs."
+        },
+        {
+          "name": "PR5.2",
+          "description": "Capacity plans shall be created and maintained."
+        },
+        {
+          "name": "PR5.3",
+          "description": "Capacity planning shall consider human, technical and financial resources."
+        },
+        {
+          "name": "PR5.4",
+          "description": "Performance of services and service components shall be monitored based on monitoring the degree of capacity utilisation and identifying operational warnings and exceptions."
+        }
+      ]
     }
   ]
 }
