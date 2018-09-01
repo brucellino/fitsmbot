@@ -283,6 +283,40 @@
           "description": "Before a new release into a live environment, a configuration baseline of the affected CIs shall be taken."
         }
       ]
+    },
+    {
+      "name": "Change Management",
+      "aka": "CHM",
+      "requirements": [
+        {
+          "name": "PR12.1",
+          "description": "All changes shall be registered and classified in a consistent manner."
+        },
+        {
+          "name": "PR12.2",
+          "description": "All changes shall be assessed and approved in a consistent manner."
+        },
+        {
+          "name": "PR12.3",
+          "description": "All changes shall be subject to a post implementation review and closed in a consistent manner."
+        },
+        {
+          "name": "PR12.4",
+          "description": "There shall be a definition of emergency changes and a consistent approach to managing them."
+        },
+        {
+          "name": "PR12.5",
+          "description": "In making decisions on the acceptance of requests for change, the benefits, risks, potential impact to services and customers and technical feasibility shall be taken into consideration."
+        },
+        {
+          "name": "PR12.6",
+          "description": "A schedule of changes shall be maintained. It shall contain details of approved changes, and proposed deployment dates, which shall be communicated to interested parties."
+        },
+        {
+          "name": "PR12.7",
+          "description": "For changes of high impact or high risk, the steps required to reverse an unsuccessful change or remedy any negative effects shall be planned and tested."
+        }
+      ]
     }
   ]
 }
