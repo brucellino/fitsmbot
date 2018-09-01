@@ -75,6 +75,28 @@
           "description": "Service reports shall be produced. Service reporting shall include performance against agreed targets, information about significant events and detected nonconformities."
         }
       ]
+    },
+    {
+      "name": "Service Availability and Continuity Management",
+      "aka": "SACM",
+      "requirements": [
+        {
+          "name": "PR4.1",
+          "description": "Service availability and continuity requirements shall be identified taking into consideration SLAs."
+        },
+        {
+          "name": "PR4.2",
+          "description": "Service availability and continuity plans shall be created and maintained."
+        },
+        {
+          "name": "PR4.3",
+          "description": "Service availability and continuity planning shall consider measures to reduce the probability and impact of identified availability and continuity risks"
+        },
+        {
+          "name": "PR4.4",
+          "description": "Availability of services and service components shall be monitored."
+        }
+      ]
     }
   ]
 }
