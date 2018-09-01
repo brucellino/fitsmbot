@@ -175,6 +175,24 @@
           "description": "Customer satisfaction shall be managed."
         }
       ]
+    },
+    {
+      "name": "Supplier Relationship Management",
+      "aka": "SUPPM",
+      "requirements": [
+        {
+          "name": "PR8.1",
+          "description": "Suppliers shall be identified."
+        },
+        {
+          "name": "PR8.2",
+          "description": "For each supplier, there shall be a designated contact responsible for managing the relationship with the supplier."
+        },
+        {
+          "name": "8.3",
+          "description": "Communication mechanisms with suppliers shall be established."
+        }
+      ]
     }
   ]
 }
