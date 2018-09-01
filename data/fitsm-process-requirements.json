@@ -119,6 +119,32 @@
           "description": "Performance of services and service components shall be monitored based on monitoring the degree of capacity utilisation and identifying operational warnings and exceptions."
         }
       ]
+    },
+    {
+      "name": "Information Security Management",
+      "aka": "ISM",
+      "requirements": [
+        {
+          "name": "PR6.1",
+          "description": "Information security policies shall be defined."
+        },
+        {
+          "name": "PR6.2",
+          "description": "Physical, technical and organizational information security controls shall be implemented to reduce the probability and impact of identified information  risks."
+        },
+        {
+          "name": "PR6.3",
+          "description": "Information security policies and controls shall be reviewed at planned intervals."
+        },
+        {
+          "name": "PR6.4",
+          "description": "Information security events and incidents shall be given an appropriate priority and managed accordingly."
+        },
+        {
+          "name": "PR6.5",
+          "description": "Access control, including provisioning of access rights, for information-processing systems and services shall be carried out in a consistent manner."
+        }
+      ]
     }
   ]
 }
