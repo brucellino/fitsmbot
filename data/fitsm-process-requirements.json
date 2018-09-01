@@ -191,6 +191,10 @@
         {
           "name": "8.3",
           "description": "Communication mechanisms with suppliers shall be established."
+        },
+        {
+          "name": "PR8.4",
+          "description": "Supplier performance shall be monitored."
         }
       ]
     }
