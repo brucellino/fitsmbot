@@ -47,6 +47,14 @@
          {
            "name": "PR2.5",
            "description": "For supporting services or service components provided by federation members or groups belonging to the same organisation as the service provider or external suppliers, OLAs and UAs shall be agreed."
+         },
+         {
+           "name": "PR2.6",
+           "description": "OLAs and UAs shall be reviewed at planned intervals."
+         },
+         {
+           "name": "PR2.7",
+           "description": "Performance of service components shall be evaluated against operational targets defined in OLAs and UAs."
          }
       ]
     }
