@@ -1,4 +1,6 @@
 {
+  "version": "2.4",
+  "license": "cc-by",
   "Generic ITSM Roles": [
     {
       "name": "SMS Owner",
