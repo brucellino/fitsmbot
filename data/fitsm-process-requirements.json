@@ -317,6 +317,36 @@
           "description": "For changes of high impact or high risk, the steps required to reverse an unsuccessful change or remedy any negative effects shall be planned and tested."
         }
       ]
+    },
+    {
+      "name": "Release and Deployment Management",
+      "aka": "RDM",
+      "requirements": [
+        {
+          "name": "PR13.1",
+          "description": "A release policy shall be defined."
+        },
+        {
+          "name": "PR13.2",
+          "description": "The deployment of new or changed services and service components to the live environment shall be planned with all relevant parties including affected."
+        },
+        {
+          "name": "PR13.3",
+          "description": "Releases shall be built and tested prior to being deployed."
+        },
+        {
+          "name": "PR13.4",
+          "description": "Acceptance criteria for each release shall be agreed with the customers and any other relevant parties. Before deployment the release shall be verified against the agreed acceptance criteria and approved."
+        },
+        {
+          "name": "PR13.5",
+          "description": "Deployment preparation shall consider steps to be taken in case of unsuccessful deployment to reduce the impact on services and customers."
+        },
+        {
+          "name": "PR13.6",
+          "description": "Releases shall be evaluated for success or failure."
+        }
+      ]
     }
   ]
 }
