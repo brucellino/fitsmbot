@@ -253,6 +253,36 @@
           "description": "Up-to-date information on known errors and effective workarounds shall be maintained."
         }
       ]
+    },
+    {
+      "name": "Configuration Management",
+      "aka": "CONFM",
+      "requirements": [
+        {
+          "name": "PR11.1",
+          "description": "Configuration item (CI) types and relationship types shall be defined."
+        },
+        {
+          "name": "PR11.2",
+          "description": "The level of detail of configuration information recorded shall be sufficient to support effective control over CIs."
+        },
+        {
+          "name": "PR11.3",
+          "description": "Each CI and its relationships with other CIs shall be recorded in a configuration management database (CMDB)."
+        },
+        {
+          "name": "PR11.4",
+          "description": "CIs shall be controlled and changes to CIs tracked in the CMDB."
+        },
+        {
+          "name": "PR11.5",
+          "description": "The information stored in the CMDB shall be verified at planned intervals."
+        },
+        {
+          "name": "PR11.6",
+          "description": "Before a new release into a live environment, a configuration baseline of the affected CIs shall be taken."
+        }
+      ]
     }
   ]
 }
