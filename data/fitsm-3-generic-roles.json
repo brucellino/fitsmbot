@@ -1,0 +1,90 @@
+{
+  "Generic ITSM Roles": [
+    {
+      "name": "SMS Owner",
+      "description": "The SMS owner (also referred to as the senior responsible owner of the SMS) is the role that has the overall accountability for the establishment and maintenance of the service management system. By means of effective governance, he or she sets the key goals and provides overall direction for the SMS. Consequently, a person with sufficient authority, usually a person on the top management level, should take on this role.",
+      "tasks": [
+        "Senior accountable owner of the entire service management system (SMS)",
+        "Overall accountability for all ITSM-related activities",
+        "Act as the primary contact point for concerns in the context of governing the entire SMS",
+        "Define and approve goals and policies for the entire SMS",
+        "Nominate the process owners and/or managers, and ensure they are competent to fulfil their roles",
+        "Approve changes to the overall SMS",
+        "Decide on the provision of resources dedicated to ITSM",
+        "Based on monitoring and reviews, decide on necessary changes in the goals, policies and provided resources for the SMS"
+      ]
+    },
+    {
+      "name": "SMS Manager",
+      "description": "The SMS manager is the role often regarded as the “project manager” of implementing IT service management in an organisation or federation. However, different from a real project manager, the SMS manager is not released from his or her duties after the SMS has been successfully implemented to some extent, since a management system will always require continuing efforts of maintenance, development and improvement. The SMS manager coordinates all efforts in planning, implementing, reviewing and further improving the SMS.",
+      "tasks": [
+        "Act as the primary contact point for all tactical concerns (including planning and development) in the context of the entire SMS",
+        "Maintain the service management plan and ensure it is available to relevant stakeholders",
+        "Ensure IT service management processes are implemented according to approved goals and policies",
+        "Maintain an adequate level of awareness and competence of the people involved in the SMS, in particular the process managers",
+        "Monitor and keep track of the suitability, effectiveness and maturity of the entire SMS",
+        "Report and, if necessary, escalate to the SMS owner",
+        "Identify opportunities for improving the effectiveness and efficiency of the SMS"
+      ]
+    },
+    {
+      "name": "Service Owner",
+      "description": "The service owner is the responsible person for a specific (IT) service offered by the service provider. This role is typically taken on by individuals with management experience. Service owner is unusual in that it cuts across processes, only touching on parts of each process.",
+      "tasks": [
+        "Overall responsibility for one specific service which is part of the service portfolio",
+        "Act as the primary contact point for all (process-independent) concerns in the context of that specific service",
+        "Act as an “expert” for the service in technical and non-technical concerns",
+        "Maintain the core service documentation, such as the service specification / description",
+        "Be kept informed of every event, situation or change connected to the service",
+        "Be involved in tasks significantly related to the service as part of selected ITSM processes, in particular SPM and SLM (see: process-specific role models)",
+        "Report on the service to the SMS owner"
+      ]
+    },
+    {
+      "name": "Process Owner",
+      "description": "The process owner has overall accountability for the operation of an ITSM process.",
+      "tasks": [
+        "Act as the primary contact point for concerns in the context of governing one specific ITSM process",
+        "Define and approve goals and policies in the context of the process according to the overall SMS goals and policies",
+        "Nominate the process manager, and ensure he / she is competent to fulfil this role",
+        "Approve changes / improvements to the operational process, such as (significant) changes to the process definition",
+        "Decide on the provision of resources dedicated to the process and its activities",
+        "Based on process monitoring and reviews, decide on necessary changes in the process-specific goals, policies and provided resources"
+      ]
+    },
+    {
+      "name": "Process Manager",
+      "description": "The process manager has overall responsibility for the effective operation of an ITSM process.",
+      "tasks": [
+        "Act as the primary contact point for operational concerns in the context of the process",
+        "Maintain the process definition / description and ensure it is available to relevant persons",
+        "Maintain an adequate level of awareness and competence of the people involved in the process",
+        "Monitor and keep track of the process execution and results (including process reviews)",
+        "Report on process performance to the process owner",
+        "Escalate to the process owner, if necessary",
+        "Identify opportunities for improving the effectiveness and efficiency of the process",
+        "Additional tasks – depending on the specific process (see: process-specific role models)"
+      ]
+    },
+    {
+      "name": "Case Owner",
+      "description": "The case owner takes accountability for the advancement of a specific case, e.g. an incident or change. They follow this case from start to finish ensuring it is correctly managed.",
+      "tasks": [
+        "Overall responsibility for one specific case occurring in a process context (e.g. one specific incident to be resolved)",
+        "Act as the primary contact point for all concerns in the context of that specific case",
+        "Coordinate all activities required to handle / resolve the specific case",
+        "Escalate exceptions to the process manager, where required",
+        "Additional tasks – depending on the specific process (see: process-specific role models)"
+      ]
+    },
+    {
+      "name": "Process Staff Member",
+      "description": "Process staff are individuals involved in the execution one or more activities within a process, but not taking a steering role (e.g. as process or case managers).",
+      "tasks": [
+        "Carry out defined activities according to the defined / established process and, as applicable, its procedures (e.g. the activity of prioritizing an incident)",
+        "Report to the case owner and / or process manager",
+        "Additional tasks – depending on the specific, process (see: process-specific role models)"
+      ]
+    }
+  ]
+}
