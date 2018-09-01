@@ -250,8 +250,7 @@
         },
         {
           "name": "PR10.4",
-          "description": "Up-to-date information on known errors and effective workarounds shall be
-          maintained."
+          "description": "Up-to-date information on known errors and effective workarounds shall be maintained."
         }
       ]
     }
