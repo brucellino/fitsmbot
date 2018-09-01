@@ -347,6 +347,20 @@
           "description": "Releases shall be evaluated for success or failure."
         }
       ]
+    },
+    {
+      "name": "Continual Service Improvement",
+      "aka": "CSI",
+      "requirements": [
+        {
+          "name": "PR14.1",
+          "description": "Opportunities for improvement shall be identified and registered."
+        },
+        {
+          "name": "PR14.2",
+          "description": "Opportunities for improvement shall be evaluated and approved in a consistent manner."
+        }
+      ]
     }
   ]
 }
