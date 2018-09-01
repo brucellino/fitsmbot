@@ -145,6 +145,36 @@
           "description": "Access control, including provisioning of access rights, for information-processing systems and services shall be carried out in a consistent manner."
         }
       ]
+    },
+    {
+      "name": "Customer Relationship Management",
+      "aka": "CRM",
+      "requirements": [
+        {
+          "name": "PR7.1",
+          "description": "Service customers shall be identified."
+        },
+        {
+          "name": "PR7.2",
+          "description": "For each customer, there shall be a designated contact responsible for managing the customer relationship and customer satisfaction."
+        },
+        {
+          "name": "PR7.3",
+          "description": "Communication mechanisms with customers shall be established."
+        },
+        {
+          "name": "PR7.4",
+          "description": "Service reviews with the customers shall be conducted at planned intervals."
+        },
+        {
+          "name": "PR7.5",
+          "description": "Service complaints from customers shall be managed."
+        },
+        {
+          "name": "PR7.6",
+          "description": "Customer satisfaction shall be managed."
+        }
+      ]
     }
   ]
 }
