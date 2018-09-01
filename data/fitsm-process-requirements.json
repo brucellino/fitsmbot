@@ -231,6 +231,29 @@
           "description": "There shall be a definition of major incidents and a consistent approach to managing them."
         }
       ]
+    },
+    {
+      "name": "Problem Management",
+      "aka": "PM",
+      "requirements": [
+        {
+          "name": "PR10.1",
+          "description": "Problems shall be identified and registered based on analysing trends on incidents."
+        },
+        {
+          "name": "PR10.2",
+          "description": "Problems shall be investigated to identify actions to resolve them or reduce their impact on the services."
+        },
+        {
+          "name": "PR10.3",
+          "description": "If a problem is not permanently resolved, a known error shall be registered together with actions such as effective workarounds and temporary fixes."
+        },
+        {
+          "name": "PR10.4",
+          "description": "Up-to-date information on known errors and effective workarounds shall be
+          maintained."
+        }
+      ]
     }
   ]
 }
