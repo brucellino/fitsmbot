@@ -197,6 +197,40 @@
           "description": "Supplier performance shall be monitored."
         }
       ]
+    },
+    {
+      "name": "Incident and Service Request Management",
+      "aka": "ISRM",
+      "requirements": [
+        {
+          "name": "PR9.1",
+          "description": "All incidents and service requests shall be registered, classified and prioritized in a consistent manner."
+        },
+        {
+          "name": "PR9.2",
+          "description": "Prioritization of incidents and service requests shall take into account service targets from SLAs"
+        },
+        {
+          "name": "PR9.3",
+          "description": "Escalation of incidents and service requests shall be carried out in a consistent manner."
+        },
+        {
+          "name": "PR9.4",
+          "description": "Closure of incidents and service requests shall be carried out in a consistent manner."
+        },
+        {
+          "name": "PR9.5",
+          "description": "Personnel involved in the incident and service request management process shall have access to relevant information including known errors, workarounds, configuration and release information."
+        },
+        {
+          "name": "PR9.6",
+          "description": "Users shall be kept informed of the progress of incidents and service requests they have reported."
+        },
+        {
+          "name": "PR9.7",
+          "description": "There shall be a definition of major incidents and a consistent approach to managing them."
+        }
+      ]
     }
   ]
 }
