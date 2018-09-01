@@ -57,6 +57,24 @@
            "description": "Performance of service components shall be evaluated against operational targets defined in OLAs and UAs."
          }
       ]
+    },
+    {
+      "name": "Service Reporting Management",
+      "aka": "SRM",
+      "requirements":[
+        {
+          "name": "PR3.1",
+          "description": "Service reports shall be specified and agreed with their recipients."
+        },
+        {
+          "name": "PR3.2",
+          "description": "The specification of each service report shall include its identity, purpose, audience, frequency, content, format and method of delivery."
+        },
+        {
+          "name": "PR3.2",
+          "description": "Service reports shall be produced. Service reporting shall include performance against agreed targets, information about significant events and detected nonconformities."
+        }
+      ]
     }
   ]
 }
