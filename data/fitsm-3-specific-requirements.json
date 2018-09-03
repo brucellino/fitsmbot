@@ -16,6 +16,27 @@
           "name": "SPM process manager",
           "tasks": [
             "Generic tasks of a process manager",
+            "Maintain the service portfolio",
+            "Manage updates to the service portfolio",
+            "Review the service portfolio at planned intervals",
+            "Ensure new or changed services are planned and designed according to the SPM process, and service design and transition packages are created and maintained"
+          ]
+        }
+      ]
+    },
+    {
+      "process": "SLM",
+      "specific_roles": [
+        {
+          "name": "SLM process owner",
+          "tasks": [
+            "Generic tasks of a process owner applied in the context of SLM"
+          ]
+        },
+        {
+          "name": "SLM process manager",
+          "tasks": [
+            "Generic tasks of a process manager",
             "Maintain the service catalogue",
             "Manage updates to the service catalogue",
             "Ensure the service catalogue is aligned with the service portfolio",
@@ -389,10 +410,25 @@
       "process": "RDM",
       "specific_roles": [
         {
-          "name": "",
+          "name": "RDM Process Owner",
           "tasks": [
-            "",
-            ""
+            "Generic tasks of a process owner applied in the context of RDM"
+          ]
+        },
+        {
+          "name": "RDM Process Manager",
+          "tasks": [
+            "Generic tasks of a process owner applied in the context of RDM",
+            "Maintain the overall release planning, including release cycles",
+            "Review deployed releases fur success"
+          ]
+        },
+        {
+          "name": "Release Owner",
+          "tasks": [
+            "Control and coordinate the activities in the lifecycle of a specific release, including planning, building, testing and deploying",
+            "Ensure that the required documentation of the release (including release plans) is complete and of adequate quality",
+            "Act as a single point of contact for the release for all stakeholders of this release including the change manager, affected change owners, developers, problem manager and customer representatives."
           ]
         }
       ]
@@ -401,10 +437,23 @@
       "process": "CSI",
       "specific_roles": [
         {
-          "name": "",
+          "name": "CSI Process Owner",
           "tasks": [
-            "",
-            ""
+            "Generic tasks of a process owner applied in the context of CSI"
+          ]
+        },
+        {
+          "name": "CSI Process Manager",
+          "tasks": [
+            "Generic tasks of a process manager",
+            "Review the status and progress of ongoing improvements in regular intervals"
+          ]
+        },
+        {
+          "name": "Improvement Owner",
+          "tasks": [
+            "Maintain the improvement under his/her ownership",
+            "Coordinate the activities to implement the improvement"
           ]
         }
       ]
