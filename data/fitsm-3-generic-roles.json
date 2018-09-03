@@ -1,7 +1,8 @@
 {
   "version": "2.4",
   "license": "cc-by",
-  "Generic ITSM Roles": [
+  "url": "http://fitsm.itemo.org/wp-content/uploads/sites/3/2018/05/FitSM-3_Role_model.pdf",
+  "roles": [
     {
       "name": "SMS Owner",
       "description": "The SMS owner (also referred to as the senior responsible owner of the SMS) is the role that has the overall accountability for the establishment and maintenance of the service management system. By means of effective governance, he or she sets the key goals and provides overall direction for the SMS. Consequently, a person with sufficient authority, usually a person on the top management level, should take on this role.",
