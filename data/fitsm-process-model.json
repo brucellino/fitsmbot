@@ -1,6 +1,8 @@
 {
   "title": "FitSM Process Model",
   "version": "2.4",
+  "license": "",
+  "url": "",
   "sections": [
     {"name": "Offer and Agree", "colour": "c0504d"},
     {"name": "Plan and Ensure", "colour": "bf6f4f"},
@@ -43,9 +45,21 @@
       "theme": "SPD",
       "objective": "To define and maintain a service portfolio",
       "section": 1,
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "Service Portfolio"
+        },
+        {
+          "name": "Service "
+        }
+      ],
       "inputs": [
-        {"name": "SP"}
+        {
+          "name": "SP"
+        },
+        {
+          "name": "Customer Requirement"
+        }
       ]
     },
     {
