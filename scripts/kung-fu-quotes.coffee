@@ -67,7 +67,7 @@ quotes = [
   "If you spend too much time thinking about a thing,
    you'll never get it done.",
   "Knowing is not enough, you must apply; willing is not enough, you must do.",
-  "I am not teaching you anything. I just help you to exlplore yourself",
+  "I am not teaching you anything. I just help you to explore yourself",
   "As you think, so shall you become."
   ]
 
