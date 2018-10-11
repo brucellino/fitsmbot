@@ -17,7 +17,7 @@
 #   @brucellino
 
 module.exports = (robot) ->
-  robot.respond /.*(hi|hello|bonjour|buongiorno|ciao|salut|sup|hey|yo).*$/i, (msg) ->
+  robot.respond /^.*\s*(hi|hello|bonjour|buongiorno|ciao|salut|sup|hey|yo)\s+.*$i/, (msg) ->
     greetings = [
       "howdy :face_with_cowboy_hat:",
       "yo",
