@@ -55,9 +55,9 @@ module.exports = (robot) ->
     
   robot.respond /categories/i, (res) ->
     robot.http(process.env.DISCOURSE_API_URL + '/categories.json').get() (err, response, body) ->
-    if err
-      res.send "Encountered an error :( #{err}"
-      return
+      if err
+        res.send "Encountered an error :( #{err}"
+        return
     res.reply body
 
   robot.respond /do you have any issues.*/i, (res) ->

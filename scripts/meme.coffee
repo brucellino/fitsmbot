@@ -37,9 +37,7 @@
 inspect = require('util').inspect
 
 module.exports = (robot) ->
-  
   robot.brain.data.send_memes = true
-
   unless robot.brain.data.imgflip_memes?
     robot.brain.data.imgflip_memes = [
       {
@@ -123,9 +121,10 @@ module.exports = (robot) ->
         template_id: 718432
       }
     ]
-
-  for meme in robot.brain.data.imgflip_memes
-    setupResponder robot, meme
+    
+    for meme in robot.brain.data.imgflip_memes
+      setupResponder robot, meme
+      console.log meme
 
 setupResponder = (robot, meme) ->
   robot.hear meme.regex, (msg) ->
@@ -137,7 +136,7 @@ generateMeme = (msg, template_id, text0, text1) ->
 
   if (username or password) and not (username and password)
     msg.reply 'To use your own Imgflip account, you need to specify username and password!'
-    return
+  return
 
   if not username
     username = 'imgflip_hubot'
@@ -145,22 +144,22 @@ generateMeme = (msg, template_id, text0, text1) ->
 
   msg.http('https://api.imgflip.com/caption_image')
   .query
-    template_id: template_id,
-    username: username,
-    password: password,
-    text0: text0,
-    text1: text1
+  template_id: template_id,
+  username: username,
+  password: password,
+  text0: text0,
+  text1: text1
   .post() (error, res, body) ->
     if error
       msg.reply "I got an error when talking to imgflip:", inspect(error)
-      return
+    return
 
-    result = JSON.parse(body)
-    success = result.success
-    errorMessage = result.error_message
+  result = JSON.parse(body)
+  success = result.success
+  errorMessage = result.error_message
 
-    if not success
-      msg.reply "Imgflip API request failed: #{errorMessage}"
-      return
-    if robot.brain.data.sendmemes != true
-      msg.send result.data.url
+  if not success
+    msg.reply "Imgflip API request failed: #{errorMessage}"
+    return
+  if robot.brain.data.sendmemes != true
+    msg.send result.data.url

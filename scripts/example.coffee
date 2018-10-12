@@ -45,7 +45,7 @@ module.exports = (robot) ->
     console.log reaction
     web.reactions.add reaction
 
-  robot.hear /(.*)like(.*)/i, (res) ->
+  robot.hear /(.*)like(.*)/i, (msg, res) ->
     res.emote "makes a freshly baked #{msg.match[1]}"
   
   robot.hear /badger/i, (res) ->
