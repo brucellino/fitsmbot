@@ -48,21 +48,31 @@ module.exports = (robot) ->
 
   robot.respond /help/i, (res) ->
     # could turn this into a message with attachments and formatting
-    res.send "Hi :wave: I am #{robot.brain.get('name')}, but you can call me #{robot.brain.get('alias')}"
-    res.send "I was written by #{robot.brain.get('author')}, who called me #{robot.brain.get('description')}"
-    res.send "I know fitsm! Ask me about FitSM, the fittest of all ITSM standards."
-    res.send "I know #{fitsm_terms['terms'].length} terms, #{fitsm_parts['parts'].length} parts, #{fitsm_general_requirements['requirements'].length} general requirements and process-specific requirements for #{fitsm_process_requirements['requirements'].length} processes."
-    res.send "I also know the FitSM process model - ask me about processes or entities"
+    res.send "Hi :wave: I am #{robot.brain.get('name')},
+      but you can call me #{robot.brain.get('alias')}"
+    res.send "I was written by #{robot.brain.get('author')},
+     who called me #{robot.brain.get('description')}"
+    res.send "I know fitsm!
+     Ask me about FitSM, the fittest of all ITSM standards."
+    res.send "I know #{fitsm_terms['terms'].length} terms,
+     #{fitsm_parts['parts'].length} parts,
+      #{fitsm_general_requirements['requirements'].length}
+       general requirements and process-specific requirements
+        for #{fitsm_process_requirements['requirements'].length} processes."
+    res.send "I also know the FitSM process model
+     - ask me about processes or entities"
   
 
   
   # I can define fitsm
   robot.respond /what is fitsm/i, (res) ->
-    res.reply "FitSM is a lightweight family of standards for IT Service Management"
+    res.reply "FitSM is a lightweight family of standards
+     for IT Service Management"
   
   # I know the parts of the standard.
   robot.hear /what are the fitsm parts/i, (res) ->
-    res.reply "FitSM #{fitsm_parts.version} is split into #{fitsm_parts.parts.length} parts"
+    res.reply "FitSM #{fitsm_parts.version} is split into
+     #{fitsm_parts.parts.length} parts"
     res.reply "#{part.name} - #{part.description}" for part in fitsm_parts.parts
 
   # I know about it's terms
@@ -88,7 +98,8 @@ module.exports = (robot) ->
       # get the matching object by term name
       # foundTerm = (term for term in terms when term.name == termRequested)
       foundTerm = (x for x in terms when x.name.toLowerCase() == termRequested)[0]
-      console.log "found #{foundTerm.name} - described as #{foundTerm.description}"
+      console.log "found #{foundTerm.name}
+       - described as #{foundTerm.description}"
       if foundTerm.notes.length > 0
         notes = ({"title": note.name, "value": note.description} for note in foundTerm.notes)
       else
@@ -166,7 +177,8 @@ module.exports = (robot) ->
         console.log "found #{processRequested} in terms"
         # get the matching object by process name
         foundProcess = (x for x in processes when x.name.toLowerCase() == processRequested)[0]
-        console.log "found #{foundProcess.name} - objective is #{foundProcess.objective}"
+        console.log "found #{foundProcess.name}
+         - objective is #{foundProcess.objective}"
         # get inputs and outputs
         console.log "Attachment notes are "
         console.log "posting message"
