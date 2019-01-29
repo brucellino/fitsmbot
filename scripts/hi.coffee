@@ -25,6 +25,10 @@ module.exports = (robot) ->
       "hi :wave:",
       "hey",
       "hidyho",
-      "hey buuuuudy"
+      "hey buuuuudy",
+      "hello there",
+      ":flag_it: ciao!",
+      ":flag_fr: salut!",
+      "'ello guvna :tophat:"
     ]
     msg.reply msg.random greetings
