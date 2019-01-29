@@ -35,6 +35,3 @@ module.exports = (robot) ->
         n = data.category_list.categories.length
         res.reply "There are #{n} categories on
           #{process.env.DISCOURSE_API_URL}"
-  
-
-  
