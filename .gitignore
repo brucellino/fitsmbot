@@ -1,3 +1,5 @@
+# certain scripts
+scripts/meme.coffee
 # Logs
 logs
 *.log
