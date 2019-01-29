@@ -114,7 +114,8 @@ module.exports = (robot) ->
     else
       res.reply "Sorry, I don't know about that."
       res.reply "Try using something like \"define fitsm <fitsm term>\""
-      res.reply "Protip: you can get all the terms by asking me what the terms or vocabulary are."
+      res.reply "Protip: you can get all the terms
+       by asking me what the terms or vocabulary are."
 
 
   # and its processes
@@ -164,7 +165,6 @@ module.exports = (robot) ->
       if processRequested in names
         console.log "found #{processRequested} in terms"
         # get the matching object by process name
-        # foundProcess = (process for process in processes when process.name == processRequested)
         foundProcess = (x for x in processes when x.name.toLowerCase() == processRequested)[0]
         console.log "found #{foundProcess.name} - objective is #{foundProcess.objective}"
         # get inputs and outputs
@@ -179,5 +179,6 @@ module.exports = (robot) ->
         )
       else
         res.reply "Sorry, I don't know about that process."
-        res.reply "Try using something like \"tell me about fitsm process service portfolio management\""
+        res.reply "Try using something like
+          \"tell me about fitsm process service portfolio management\""
         res.reply "Try sometihng like what are the fitsm processes"
