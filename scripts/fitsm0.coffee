@@ -68,7 +68,15 @@ module.exports = (robot) ->
   # I know about it's terms
   robot.hear /what (is|are) the fitsm (terms|vocab|vocabulary|defined terms)/i , (res) ->
     terms = fitsm_terms.terms
-    res.reply term.name for term in terms
+    if res.message.thread_ts?
+      # The incoming message was inside a thread,
+      # responding normally will continue the thread
+      res.reply term.name for term in terms
+    else
+      # The incoming message was not inside a thread,
+      # so lets respond by creating a new thread
+      res.message.thread_ts = res.message.rawMessage.ts
+      res.reply term.name for term in terms
 
   robot.respond /define fitsm (.*)/i, (res) ->
     terms = fitsm_terms.terms
@@ -111,21 +119,16 @@ module.exports = (robot) ->
 
   # and its processes
   robot.hear /tell me about the fitsm processes/i, (res) ->
-    #robot.send "there are #{fitsm_processes_model.processes.length} processes, organised into
-    # construct the sections
-    
-    # make a fields object for each field
-    # msg_fields = (({
-    #   "title": process.title, "value": process.name
-    #   } for process in fitsm_processes_model.processes when process.section == i
-    # ) for i in [0..fitsm_processes_model.sections.length])    # and put it into the attachments
+    msg_fields = (({
+      "title": process.title, "value": process.name
+      } for process in fitsm_processes_model.processes when process.section == i
+    ) for i in [0..fitsm_processes_model.sections.length])
+    # and put it into the attachments
     for section in [0...fitsm_processes_model.sections.length]
       console.log section
       msg_fields[section] = fitsm_processes_model.sections.filter (section) ->
         fitsm_processes_model.sections.section = section
-    
     console.log msg_fields
-        
     
     msg_attachments = ({
       "fallback": section.name,
@@ -134,17 +137,47 @@ module.exports = (robot) ->
       "text": section.name,
       "fields": msg_fields
       } for section in fitsm_processes_model.sections)
+
     message = {
       channel: res.message.room,
-      text: "there are #{fitsm_processes_model.processes.length} processes, organised into sections:",
+      text: "there are #{fitsm_processes_model.processes.length} \
+             processes, organised into sections:",
       attachments: msg_attachments
     }
     console.log message
-    # web.chat.postMessage(
-    #   {
-    #     channel: res.message.room,
-    #     text: "there are #{fitsm_processes_model.processes.length} processes, organised into sections:",
-    #     attachments: msg_attachments
-        
-    #   }
-    # )
+    web.chat.postMessage(
+      {
+        channel: res.message.room,
+        text: "there are #{fitsm_processes_model.processes.length}\
+         processes, organised into sections:",
+        attachments: msg_attachments
+      }
+    )
+
+# give info about specific processes
+    robot.hear /fitsm process (.*)/i, (res) ->
+      processes = fitsm_processes_model.processes
+      console.log processes
+      processRequested = res.match[1]
+      console.log "#{processRequested} definition requested"
+      names = processes.map (p) -> p.name.toLowerCase()
+      if processRequested in names
+        console.log "found #{processRequested} in terms"
+        # get the matching object by process name
+        # foundProcess = (process for process in processes when process.name == processRequested)
+        foundProcess = (x for x in processes when x.name.toLowerCase() == processRequested)[0]
+        console.log "found #{foundProcess.name} - objective is #{foundProcess.objective}"
+        # get inputs and outputs
+        console.log "Attachment notes are "
+        console.log "posting message"
+  
+        web.chat.postMessage(
+          {
+            channel: res.message.room,
+            text: "#{foundProcess.title} objective: #{foundProcess.objective}",
+          }
+        )
+      else
+        res.reply "Sorry, I don't know about that process."
+        res.reply "Try using something like \"tell me about fitsm process service portfolio management\""
+        res.reply "Try sometihng like what are the fitsm processes"

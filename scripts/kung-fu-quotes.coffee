@@ -15,7 +15,7 @@
 #   and Abraham Lincoln
 # Author:
 #   @brucellino
-
+{ WebClient } = require "@slack/client"
 quotes = [
   "If you trust yourself, any choice you make will be correct.
   If you do not trust yourself, anything you do will be wrong.",
@@ -67,10 +67,22 @@ quotes = [
   "If you spend too much time thinking about a thing,
    you'll never get it done.",
   "Knowing is not enough, you must apply; willing is not enough, you must do.",
-  "I am not teaching you anything. I just help you to exlplore yourself",
+  "I am not teaching you anything. I just help you to explore yourself",
   "As you think, so shall you become."
   ]
 
 module.exports = (robot) ->
+  web = new WebClient robot.adapter.options.token
   n = Math.floor(Math.random() * (quotes.length))
-  robot.messageRoom 'general', quotes[n]
+
+  # get the fitsm channel
+  default_channel_name = "fitsm"
+  web.channels.list()
+    .then (api_response) ->
+      # List is searched for the channel with the right name, and the notification_room is updated
+      room = api_response.channels.find (channel) -> channel.name is default_channel_name
+      notification_room = room.id if room?
+      robot.messageRoom room.id, quotes[n]
+    # NOTE: for workspaces with a large number of channels, this result in a timeout error. Use pagination.
+    .catch (error) -> robot.logger.error error.message
+  
