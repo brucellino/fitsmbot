@@ -73,16 +73,20 @@ quotes = [
 
 module.exports = (robot) ->
   web = new WebClient robot.adapter.options.token
+  # choose a random quote
   n = Math.floor(Math.random() * (quotes.length))
 
   # get the fitsm channel
   default_channel_name = "fitsm"
   web.channels.list()
     .then (api_response) ->
-      # List is searched for the channel with the right name, and the notification_room is updated
-      room = api_response.channels.find (channel) -> channel.name is default_channel_name
+      # The channel list is searched for the channel with the right name,
+      # and the notification_room is updated
+      room = api_response.channels.find (channel) ->
+        channel.name is default_channel_name
       notification_room = room.id if room?
       robot.messageRoom room.id, quotes[n]
-    # NOTE: for workspaces with a large number of channels, this result in a timeout error. Use pagination.
-    .catch (error) -> robot.logger.error error.message
-  
+      # NOTE: for workspaces with a large number of channels,
+      # this can result in a timeout error. Use pagination.
+    .catch (error) ->
+      robot.logger.error error.message

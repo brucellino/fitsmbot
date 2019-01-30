@@ -21,7 +21,7 @@
 { WebClient } = require "@slack/client"
 
 module.exports = (robot) ->
-  web = new WebClient robot.adapter.options.token
+  web = new WebClient robot.adapter.options.token if robot.adappter == 'slack'
   
   # Could use the giphy api here.
   # https://api.giphy.com/v1/gifs/search?api_key==yoda&limit=1&offset=10&rating=R&lang=en
@@ -45,8 +45,12 @@ module.exports = (robot) ->
     console.log reaction
     web.reactions.add reaction
 
-  robot.hear /(.*)like(.*)/i, (msg, res) ->
-    res.emote "makes a freshly baked #{msg.match[1]}"
+  robot.hear /(.+) like (.+)/i, (res) ->
+    name = res.message.user.name
+    thing = res.match[2]
+    console.log name
+    console.log thing
+    res.emote "makes #{name} a freshly baked #{thing}"
   
   robot.hear /badger/i, (res) ->
     if res.message.thread_ts?
@@ -58,31 +62,3 @@ module.exports = (robot) ->
       # so lets respond by creating a new thread
       res.message.thread_ts = res.message.rawMessage.ts
       res.send "Slight digression, we need to talk about these BADGERS"
-
-  robot.error (err, res) ->
-    robot.logger.error "DOES NOT COMPUTE"
-  
-    if res?
-      res.reply "DOES NOT COMPUTE"
-      res.reply err
-  
-  # Send details to a room.
-  # the expected value of :room is going to vary by adapter,
-  # it might be a numeric id, name, token, or some other value
-  robot.router.post '/hubot/chatsecrets/:room', (request, response) ->
-    room   = request.params.room
-    data   = if request.body.payload? then JSON.parse request.body.payload else request.body
-    secret = data.secret
-
-    robot.messageRoom room, "I have a secret: #{secret}"
-
-    response.send 'OK'
-
-  # robot.router.post '/hubot/github/:repo', (request, response) ->
-  #   room = 'general'
-  #   data = if request.body.payload? then JSON.parse request.body.payload else request.body
-  #   console.log data
-
-  #   robot.messageRoom room, "message from github for #{request.params.repo} "
-
-  #   robot.send 'OK'

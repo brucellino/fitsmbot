@@ -8,14 +8,13 @@
 # Configuration:
 #   REDIS_URL needs to be set in common.env
 #
-#   HUBOT_GITHUB_TOKEN needs to be set in secrets.env
-#
 # Commands:
 #   hubot make an improvement - open an issue against the repo to ask the
 #   maintainers to improve the bot.
 #   This doesn't work yet :)
 #
-#   hubot categories - should get back the json of categories from the discussion forum
+#   hubot categories -
+#         should get back the json of categories from the discussion forum
 #
 # Notes:
 #   This script is about the bot itself - it's identity and self-improvement
@@ -36,10 +35,6 @@ module.exports = (robot) ->
   robot.brain.set 'alias', "FitBot"
   robot.brain.set 'author', "@brucellino"
   robot.brain.set 'description', "A bot who knows FitSM kung-fu"
-  robot.respond /report(.*)/i, (res) ->
-    issue_text = res.match[1]
-    console.log "github token is" + process.env.HUBOT_GITHUB_TOKEN
-  
   # be nice
   no_stress = [
     "sure!",
@@ -47,19 +42,9 @@ module.exports = (robot) ->
     "no stress",
     "don't mention it",
     "all in a day's work",
-     "any time buddy"]
-  robot.hear /thanks/i, (res) ->
+     "any time buddy" ]
+  robot.hear /thank(s| you)/i, (res) ->
     res.send res.random no_stress
-  robot.respond /not you.*/i, (res) ->
+  robot.respond /not you\s?/i, (res) ->
     res.reply "my bad :bow:"
-    
-  robot.respond /categories/i, (res) ->
-    robot.http(process.env.DISCOURSE_API_URL + '/categories.json').get() (err, response, body) ->
-      if err
-        res.send "Encountered an error :( #{err}"
-        return
-    res.reply body
 
-  robot.respond /do you have any issues.*/i, (res) ->
-    # get the issues
-    robot.http(process.env.GITHUB_API + '/repos/' + owner + '/' + repo + '/issues')
