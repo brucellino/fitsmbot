@@ -77,6 +77,7 @@
     {
       "title": "CRM",
       "name": "Customer Relationship Management",
+      "theme": "SPD",
       "objective": "To establish and maintain a good relationship with customers receiving services",
       "section": 1,
       "inputs": [],
@@ -85,6 +86,7 @@
     },
     {
       "title": "SUPPM",
+      "theme": "SPD",
       "name": "Supplier Relationship Management",
       "objective": "To establish and maintain a healthy relationship with suppliers supporting the service provider in delivering services to customers, and monitor their performance",
       "section": 2,
@@ -168,6 +170,7 @@
     },
     {
       "title": "CSI",
+      "theme": "",
       "name": "Continual Service Improvement Management",
       "objective": "To identify, prioritize, plan, implement and review improvements to services and service management",
       "section": 5,
