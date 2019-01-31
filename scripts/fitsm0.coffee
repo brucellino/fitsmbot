@@ -37,14 +37,28 @@ module.exports = (robot) ->
   process_requirements_file = process.cwd() +
    '/data/fitsm-process-requirements.json'
   
+  # The process model is quite complex, we'll need some arrays
+  # for constructing message attachments later
   fitsm_terms = require terms_file
   fitsm_parts = require parts_file
   fitsm_processes_model = require process_model_file
   fitsm_general_requirements = require general_requirements_file
   fitsm_process_requirements = require process_requirements_file
   
-  # The process model is quite complex, we'll need some arrays
-  # for constructing message attachments later
+
+  # Respond with the processes of a specific section
+  robot.respond /processes in section\s*(\d)/i, (res) ->
+    s = parseInt(res.match[1],10)
+    console.log typeof s
+    if s < 1 and s > 6
+      res.send('Sorry, there are only 6 process sections.
+       Try again with `processes in section <1-6>` ')
+      return
+    res.send "looking for processes in section #{s} - #{fitsm_processes_model.sections[s].name}"
+    selected_processes = fitsm_processes_model.processes.filter (p) -> p.section == s
+    console.log(selected_processes)
+    res.send "found #{selected_processes.length} processes in section #{s}"
+    (res.send "#{p.title} (#{p.theme}) - Objective: #{p.objective}" ) for p in selected_processes
 
   robot.respond /help/i, (res) ->
     # could turn this into a message with attachments and formatting
@@ -61,11 +75,10 @@ module.exports = (robot) ->
         for #{fitsm_process_requirements['requirements'].length} processes."
     res.send "I also know the FitSM process model
      - ask me about processes or entities"
-  
 
   
   # I can define fitsm
-  robot.respond /what is fitsm/i, (res) ->
+  robot.respond /(what is|define)\s+fitsm/i, (res) ->
     res.reply "FitSM is a lightweight family of standards
      for IT Service Management"
   
@@ -76,7 +89,8 @@ module.exports = (robot) ->
     res.reply "#{part.name} - #{part.description}" for part in fitsm_parts.parts
 
   # I know about it's terms
-  robot.hear /what (is|are) the fitsm (terms|vocab|vocabulary|defined terms)/i , (res) ->
+  # there are a lot of terms (75 to be precise) so the resonse comes in a thread
+  robot.hear /what (is|are)\s+(the fitsm\s+)(terms|vocab|vocabulary|defined terms)/i , (res) ->
     terms = fitsm_terms.terms
     if res.message.thread_ts?
       # The incoming message was inside a thread,
@@ -88,9 +102,11 @@ module.exports = (robot) ->
       res.message.thread_ts = res.message.rawMessage.ts
       res.reply term.name for term in terms
 
-  robot.respond /define fitsm (.*)/i, (res) ->
+
+# Define FitSM terms as per the vocabulary
+  robot.respond /define\s+(.*)/i, (res) ->
     terms = fitsm_terms.terms
-    termRequested = res.match[1]
+    termRequested = res.match[1].toLowerCase()
     console.log "#{termRequested} definition requested"
     names = terms.map (t) -> t.name.toLowerCase()
     if termRequested in names
@@ -130,7 +146,7 @@ module.exports = (robot) ->
 
 
   # and its processes
-  robot.hear /tell me about the fitsm processes/i, (res) ->
+  robot.hear /(tell me about|describe|help)?\s*(the)?\s(fitsm processes)/i, (res) ->
     msg_fields = (({
       "title": process.title, "value": process.name
       } for process in fitsm_processes_model.processes when process.section == i
@@ -140,8 +156,11 @@ module.exports = (robot) ->
       console.log section
       msg_fields[section] = fitsm_processes_model.sections.filter (section) ->
         fitsm_processes_model.sections.section = section
-    console.log msg_fields
     
+  # get all the processes in section 1
+
+    console.log(section.name) for section in fitsm_processes_model.sections
+    console.log(p.title) for p in fitsm_processes_model.processes
     msg_attachments = ({
       "fallback": section.name,
       "title": section.title,
@@ -152,8 +171,8 @@ module.exports = (robot) ->
 
     message = {
       channel: res.message.room,
-      text: "there are #{fitsm_processes_model.processes.length} \
-             processes, organised into sections:",
+      text: "there are #{fitsm_processes_model.processes.length} processes, \
+        organised into sections:",
       attachments: msg_attachments
     }
     console.log message
@@ -166,31 +185,55 @@ module.exports = (robot) ->
       }
     )
 
-# give info about specific processes
-    robot.hear /fitsm process (.*)/i, (res) ->
-      processes = fitsm_processes_model.processes
-      console.log processes
-      processRequested = res.match[1]
-      console.log "#{processRequested} definition requested"
-      names = processes.map (p) -> p.name.toLowerCase()
-      if processRequested in names
-        console.log "found #{processRequested} in terms"
-        # get the matching object by process name
-        foundProcess = (x for x in processes when x.name.toLowerCase() == processRequested)[0]
-        console.log "found #{foundProcess.name}
-         - objective is #{foundProcess.objective}"
-        # get inputs and outputs
-        console.log "Attachment notes are "
-        console.log "posting message"
-  
-        web.chat.postMessage(
-          {
-            channel: res.message.room,
-            text: "#{foundProcess.title} objective: #{foundProcess.objective}",
-          }
-        )
-      else
-        res.reply "Sorry, I don't know about that process."
-        res.reply "Try using something like
-          \"tell me about fitsm process service portfolio management\""
-        res.reply "Try sometihng like what are the fitsm processes"
+# Respond with information about specific processes
+# This should match on both the process name and the process title
+# as defined in FitSM-0
+# This uses the Slack Web API to construct a message with attachments as a reply
+# to a query on a specific process.
+# The attachments should be the inputs and outputs of the process
+
+  robot.respond /describe fitsm process (.*)/i, (res) ->
+    processes = fitsm_processes_model.processes
+    processRequested = res.match[1]
+    console.log "#{processRequested} definition requested"
+    names = processes.map (p) -> p.name.toLowerCase()
+    titles = processes.map (p) -> p.title.toLowerCase()
+    console.log(titles)
+    if processRequested in names
+      console.log "found #{processRequested} in terms"
+      # get the matching object by process name
+      foundProcess = (x for x in processes when x.name.toLowerCase() == processRequested)[0]
+      console.log "found #{foundProcess.name}
+        - objective is #{foundProcess.objective}"
+      # get inputs and outputs
+      console.log "Attachment notes are "
+      console.log "posting message"
+
+      web.chat.postMessage(
+        {
+          channel: res.message.room,
+          text: "#{foundProcess.title} objective: #{foundProcess.objective}"
+        }
+      )
+    # check if the query is in the titles of the process
+    else if processRequested in titles
+      console.log "found #{processRequested} in titles"
+      # get the matching object by process title
+      foundProcess = (x for x in processes when x.title.toLowerCase() == processRequested)[0]
+      console.log "found #{foundProcess.name}
+        - objective is #{foundProcess.objective}"
+      # get inputs and outputs
+      console.log "Attachment notes are "
+      console.log "posting message"
+
+      web.chat.postMessage(
+        {
+          channel: res.message.room,
+          text: "#{foundProcess.title} objective: #{foundProcess.objective}",
+        }
+      )
+    else
+      res.reply "Sorry, I don't know about that process."
+      res.reply "Try using something like
+        \"tell me about fitsm process service portfolio management\""
+      res.reply "Try sometihng like what are the fitsm processes"
