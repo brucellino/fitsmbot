@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Added advice script ported in from hubot-scripts.
+- Added scripts ported in from hubot-scripts.
+  - advice: gives some advice on things when you're desperate
+  - urban: get definitions from the urban dictionary, when the FitSM vocabulary is not enough.
+  - uptime: respond with uptime
+  - sweet|dude: Be iry 🏄 🤙
+- Made FitSM Channel a variable read via common.env, updated kung-fu script to read it. 
 - Environment variables separated into separate parts.
 - Changelog added

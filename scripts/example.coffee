@@ -21,19 +21,42 @@
 { WebClient } = require "@slack/client"
 
 module.exports = (robot) ->
-  web = new WebClient robot.adapter.options.token if robot.adappter == 'slack'
+  web = new WebClient robot.adapter.options.token if robot.adapter == 'slack'
   
-  # Could use the giphy api here.
-  # https://api.giphy.com/v1/gifs/search?api_key==yoda&limit=1&offset=10&rating=R&lang=en
   robot.hear /(.*)(will try|ll try)(.*)/i, (res) ->
-    res.reply "There is no try, there is only do"
-
-
+    url = "#{process.env.GIPHY_API_URL}/search?q=yoda+no+try&api_key=#{process.env.GIPHY_API_KEY}&limit=20"
+    console.log(url)
+    robot.http(url)
+        .get() (err, response, body) ->
+          if err
+            res.send "encountered error #{err}"
+            return
+          data = JSON.parse(body)
+          number = Math.floor( Math.random() * 20)
+          console.log(number)
+          res.send data.data[number].images.original.url
+        
   robot.hear /test/i, (res) ->
     web.api.test()
       .then () -> res.send "Your connection to the Slack API is working!"
       .catch (error) -> res.send "Your connection to the Slack API failed :("
   
+
+  # report on whether the environment variables are set up properly.
+  robot.hear /env check/i, (res) ->
+    res.message.thread_ts = res.message.rawMessage.ts if not res.message.thread_ts?
+    res.send "checking environment"
+    required_vars = [
+      'GITHUB_ORG',
+      'GITHUB_APP_NAME',
+      'HUBOT_GITHUB_TOKEN',
+      'HUBOT_DISCOURSE_API_TOKEN'
+    ]
+    s = ("process.env.#{k}" for k in required_vars)
+    console.log 'process.env."#{GITHUB_APP_NAME}"'
+    
+  
+
   robot.hear /(.*)('s|is) cool(.*)/i, (res) ->
     console.log res.message.room
     console.log res.message.id
@@ -62,3 +85,8 @@ module.exports = (robot) ->
       # so lets respond by creating a new thread
       res.message.thread_ts = res.message.rawMessage.ts
       res.send "Slight digression, we need to talk about these BADGERS"
+
+  robot.hear /^(sweet|dude)!/i, (msg) ->
+    switch msg.match[1].toLowerCase()
+      when "sweet" then msg.send "Dude! 🤙"
+      when "dude" then msg.send "Sweet! 🤙"

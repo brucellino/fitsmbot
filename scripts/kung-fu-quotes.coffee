@@ -77,7 +77,8 @@ module.exports = (robot) ->
   n = Math.floor(Math.random() * (quotes.length))
 
   # get the fitsm channel
-  default_channel_name = "fitsm"
+  #default_channel_name = "fitsm"
+  default_channel_name = process.env.FITSM_SLACK_CHANNEL
   web.channels.list()
     .then (api_response) ->
       # The channel list is searched for the channel with the right name,

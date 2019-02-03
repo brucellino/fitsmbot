@@ -20,7 +20,7 @@ getAdvice = (msg, query) ->
   msg.http("https://api.adviceslip.com/advice/search/#{query}")
     .get() (err, res, body) ->
       console.log query
-      results = JSON.parse body if not err
+      results = JSON.parse body unless err?
       if results.message? then randomAdvice(msg) else msg.send(msg.random(results.slips).advice)
 
 randomAdvice = (msg) ->
