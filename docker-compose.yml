@@ -5,6 +5,7 @@ services:
     build: .
     env_file:
       - common.env
+      - github.env
       - secrets.env
     expose:
       - 8080
