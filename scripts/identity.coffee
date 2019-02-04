@@ -26,6 +26,7 @@
 #
 # Author:
 #   @brucellino
+
 module.exports = (robot) ->
 
   owner = 'EGI-Foundation'
@@ -35,6 +36,10 @@ module.exports = (robot) ->
   robot.brain.set 'alias', "FitBot"
   robot.brain.set 'author', "@brucellino"
   robot.brain.set 'description', "A bot who knows FitSM kung-fu"
+
+  # reset knowledge of who has thanked it and how many times.
+  robot.brain.set 'been_thanked', {}
+
   # be nice
   no_stress = [
     "sure!",
@@ -42,9 +47,16 @@ module.exports = (robot) ->
     "no stress",
     "don't mention it",
     "all in a day's work",
-     "any time buddy" ]
+    "any time buddy",
+    "Ah fagheddabouddit" ]
   robot.hear /thank(s| you)/i, (res) ->
+    thanked_times = robot.brain.get('been_thanked')
+    res.message.user.id
+    
     res.send res.random no_stress
   robot.respond /not you\s?/i, (res) ->
     res.reply "my bad :bow:"
 
+  robot.respond /who are you/i, (res) ->
+    res.reply "My name is #{robot.brain.get('name')},\
+    but you can call me #{robot.brain.get('alias')}"

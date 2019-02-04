@@ -16,19 +16,34 @@
 # Author:
 #   @brucellino
 
+regex = ///
+  (hi|
+  hello|
+  bonjour|
+  buongiorno|
+  ciao|
+  salut|
+  sup|
+  hey|
+  yo|
+  howdy|
+  hidyho)
+  ///i
+
+greetings = [
+  "howdy :face_with_cowboy_hat:",
+  "yo",
+  "hey",
+  "hi :wave:",
+  "hey",
+  "hidyho",
+  "hey buuuuudy",
+  "hello there",
+  "🇮🇹 ciao!",
+  "🇫🇷 salut!",
+  "'ello guvna :tophat:",
+  "what's shakin, Alabama?"
+  ]
 module.exports = (robot) ->
-  robot.respond /(hi|hello|bonjour|buongiorno|ciao|salut|sup|hey|yo)/i, (msg) ->
-    greetings = [
-      "howdy :face_with_cowboy_hat:",
-      "yo",
-      "hey",
-      "hi :wave:",
-      "hey",
-      "hidyho",
-      "hey buuuuudy",
-      "hello there",
-      ":flag_it: ciao!",
-      ":flag_fr: salut!",
-      "'ello guvna :tophat:"
-    ]
+  robot.respond regex, (msg) ->
     msg.reply msg.random greetings

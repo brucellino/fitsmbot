@@ -21,7 +21,7 @@
 { WebClient } = require "@slack/client"
 
 module.exports = (robot) ->
-  web = new WebClient robot.adapter.options.token if robot.adapter == 'slack'
+  web = new WebClient robot.adapter.options.token
   
   robot.hear /(.*)(will try|ll try)(.*)/i, (res) ->
     url = "#{process.env.GIPHY_API_URL}/search?q=yoda+no+try&api_key=#{process.env.GIPHY_API_KEY}&limit=20"
@@ -40,7 +40,6 @@ module.exports = (robot) ->
     web.api.test()
       .then () -> res.send "Your connection to the Slack API is working!"
       .catch (error) -> res.send "Your connection to the Slack API failed :("
-  
 
   # report on whether the environment variables are set up properly.
   robot.hear /env check/i, (res) ->
@@ -67,13 +66,6 @@ module.exports = (robot) ->
       }
     console.log reaction
     web.reactions.add reaction
-
-  robot.hear /(.+) like (.+)/i, (res) ->
-    name = res.message.user.name
-    thing = res.match[2]
-    console.log name
-    console.log thing
-    res.emote "makes #{name} a freshly baked #{thing}"
   
   robot.hear /badger/i, (res) ->
     if res.message.thread_ts?
