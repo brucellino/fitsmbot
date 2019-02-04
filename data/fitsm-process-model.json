@@ -1,44 +1,164 @@
 {
   "title": "FitSM Process Model",
   "version": "2.4",
-  "license": "",
-  "url": "",
+  "license": "cc-by",
+  "url": "http://fitsm.itemo.org/wp-content/uploads/sites/3/2018/05/FitSM-3_Role_model.pdf",
   "sections": [
-    {"name": "Offer and Agree", "colour": "c0504d"},
-    {"name": "Plan and Ensure", "colour": "bf6f4f"},
-    {"name": "Control and Deploy", "colour": "be8d52"},
-    {"name": "Resolve and Prevent", "colour": "bda954"},
-    {"name": "Report and Improve", "colour": "b5bc57"},
-    {"name": "Protect and Secure", "colour": "9bbb59"}
+    { "name": "Offer and Agree", "colour": "c0504d" },
+    { "name": "Plan and Ensure", "colour": "bf6f4f" },
+    { "name": "Control and Deploy", "colour": "be8d52" },
+    { "name": "Resolve and Prevent", "colour": "bda954" },
+    { "name": "Report and Improve", "colour": "b5bc57" },
+    { "name": "Protect and Secure", "colour": "9bbb59" }
   ],
   "themes": ["SPD", "SOC"],
-  "entityTypes": ["db","record","service","human"],
+  "entityTypes": ["db", "record", "service", "human"],
   "entities": [
-    { "name": "Service Portfolio", "aka": "SP", "singleton": true, "type": "db"},
-    { "name": "Service Design and Transition Package", "aka": "SDTP", "singleton": false, "type": "record"},
-    { "name": "Service Specifications", "aka": "ServiceSpec", "singleton": false, "type": "record"},
-    { "name": "Service Catalogue", "aka": "SC", "singleton": true, "type": "db"},
-    { "name": "Service", "aka": "Service", "singleton": false, "type": "service"},
-    { "name": "Service Report", "aka": "ServiceRep", "singleton": false, "type": "record"},
-    { "name": "Service Request", "aka": "ServiceReq", "singleton": false, "type": "record"}, 
-    { "name": "Customer", "aka": "Customer", "singleton": false, "type": "human"},
-    { "name": "Customer Database", "aka": "CustDB", "singleton": true, "type": "db"},
-    { "name": "Customer Requirement", "aka": "CustReq", "singleton": false, "type": "record"},
-    { "name": "Supplier", "aka": "Supplier", "singleton": false, "type": "human"},
-    { "name": "Supplier Database", "aka": "SuppDB", "singleton": true, "type": "db"},
-    { "name": "Service Level Agreement", "aka": "SLA", "singleton": false, "type": "record"},
-    { "name": "Operating Level Agreement", "aka": "OLA", "singleton": false, "type": "record"},
-    { "name": "Availability and Continuity Plan", "aka": "AvCoPlan", "singleton": false, "type": "record"},
-    { "name": "Capacity Plan", "aka": "CapPlan", "singleton": false, "type": "record"},
-    { "name": "Policy", "aka": "Policy", "singleton": false, "type": "record"},
-    { "name": "Incident Records", "aka": "IncRec", "singleton": false, "type": "record"},
-    { "name": "Problem Record", "aka": "ProbRec", "singleton": false, "type": "record"},
-    { "name": "Known Error Database", "aka": "KEDB", "singleton": true, "type": "db"},
-    { "name": "Request for Change", "aka": "RfC", "singleton": false, "type": "record"},
-    { "name": "Configuration Management Database", "aka": "CMDB", "singleton": false, "type": "db"},
-    { "name": "Configuration Information", "aka": "ConfInfo", "singleton": false, "type": "db"},
-    { "name": "Release Record", "aka": "RelRec", "singleton": false, "type": "record"},
-    { "name": "Approved Change", "aka": "YesChange", "singleton": false, "type": "record"}
+    {
+      "name": "Service Portfolio",
+      "aka": "SP",
+      "singleton": true,
+      "type": "db"
+    },
+    {
+      "name": "Service Design and Transition Package",
+      "aka": "SDTP",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Service Specifications",
+      "aka": "ServiceSpec",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Service Catalogue",
+      "aka": "SC",
+      "singleton": true,
+      "type": "db"
+    },
+    {
+      "name": "Service",
+      "aka": "Service",
+      "singleton": false,
+      "type": "service"
+    },
+    {
+      "name": "Service Report",
+      "aka": "ServiceRep",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Service Request",
+      "aka": "ServiceReq",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Customer",
+      "aka": "Customer",
+      "singleton": false,
+      "type": "human"
+    },
+    {
+      "name": "Customer Database",
+      "aka": "CustDB",
+      "singleton": true,
+      "type": "db"
+    },
+    {
+      "name": "Customer Requirement",
+      "aka": "CustReq",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Supplier",
+      "aka": "Supplier",
+      "singleton": false,
+      "type": "human"
+    },
+    {
+      "name": "Supplier Database",
+      "aka": "SuppDB",
+      "singleton": true,
+      "type": "db"
+    },
+    {
+      "name": "Service Level Agreement",
+      "aka": "SLA",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Operating Level Agreement",
+      "aka": "OLA",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Availability and Continuity Plan",
+      "aka": "AvCoPlan",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Capacity Plan",
+      "aka": "CapPlan",
+      "singleton": false,
+      "type": "record"
+    },
+    { "name": "Policy", "aka": "Policy", "singleton": false, "type": "record" },
+    {
+      "name": "Incident Records",
+      "aka": "IncRec",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Problem Record",
+      "aka": "ProbRec",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Known Error Database",
+      "aka": "KEDB",
+      "singleton": true,
+      "type": "db"
+    },
+    {
+      "name": "Request for Change",
+      "aka": "RfC",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Configuration Management Database",
+      "aka": "CMDB",
+      "singleton": false,
+      "type": "db"
+    },
+    {
+      "name": "Configuration Information",
+      "aka": "ConfInfo",
+      "singleton": false,
+      "type": "db"
+    },
+    {
+      "name": "Release Record",
+      "aka": "RelRec",
+      "singleton": false,
+      "type": "record"
+    },
+    {
+      "name": "Approved Change",
+      "aka": "YesChange",
+      "singleton": false,
+      "type": "record"
+    }
   ],
   "processes": [
     {
@@ -71,8 +191,8 @@
       "theme": "SPD",
       "objective": "To maintain a service catalogue, and to define, agree and monitor service levels with customers by establishing meaningful service level agreements (SLAs) and supportive operational level (OLAs) and underpinning agreements (UAs) with suppliers.",
       "section": 1,
-      "inputs": [ {"aka": "SP"}],
-      "outputs": [ { "aka": "SC"}, {"aka": "SLA"}]
+      "inputs": [{ "aka": "SP" }],
+      "outputs": [{ "aka": "SC" }, { "aka": "SLA" }]
     },
     {
       "title": "CRM",
@@ -82,7 +202,6 @@
       "section": 1,
       "inputs": [],
       "outputs": []
-
     },
     {
       "title": "SUPPM",
@@ -91,8 +210,7 @@
       "objective": "To establish and maintain a healthy relationship with suppliers supporting the service provider in delivering services to customers, and monitor their performance",
       "section": 2,
       "inputs": [],
-      "outputs": [ { "aka": "SuppDB"}]
-
+      "outputs": [{ "aka": "SuppDB" }]
     },
     {
       "title": "SACM",
@@ -100,8 +218,8 @@
       "theme": "SPD",
       "objective": "To ensure sufficient service availability to meet agreed requirements and adequate service ",
       "section": 2,
-      "inputs": [ { "aka": "SLA"}],
-      "outputs": [ { "aka": "AvCoPlan"}]
+      "inputs": [{ "aka": "SLA" }],
+      "outputs": [{ "aka": "AvCoPlan" }]
     },
     {
       "title": "CAPM",
@@ -109,9 +227,8 @@
       "theme": "SPD",
       "objective": "To ensure sufficient capacities are provided to meet agreed service capacity and performance requirements",
       "section": 2,
-      "inputs": [ { "aka": "SLA"}],
-      "outputs": [ { "aka": "CapPlan" }]
-
+      "inputs": [{ "aka": "SLA" }],
+      "outputs": [{ "aka": "CapPlan" }]
     },
     {
       "title": "CONFM",
@@ -119,8 +236,8 @@
       "theme": "SOC",
       "objective": "To provide and maintain a logical model of all configuration items (CIs) and their relationships and dependencies",
       "section": 3,
-      "inputs": [ { "aka": "CHM"}],
-      "outputs": [{ "aka": "CMDB"}, { "aka": "CHM"}]
+      "inputs": [{ "aka": "CHM" }],
+      "outputs": [{ "aka": "CMDB" }, { "aka": "CHM" }]
     },
     {
       "title": "CHM",
@@ -128,8 +245,8 @@
       "theme": "SOC",
       "objective": "To ensure changes to CIs are planned, approved, implemented and reviewed in a controlled to avoid adverse impact of changes to services or the customers receiving services",
       "section": 3,
-      "inputs": [ { "aka": "RfC"}, { "aka": "CONFM"}],
-      "outputs": [ { "aka": "YesChange"}, { "aka": "RfC"}, { "aka": "CONFM"}]
+      "inputs": [{ "aka": "RfC" }, { "aka": "CONFM" }],
+      "outputs": [{ "aka": "YesChange" }, { "aka": "RfC" }, { "aka": "CONFM" }]
     },
     {
       "title": "RDM",
@@ -137,9 +254,8 @@
       "theme": "SOC",
       "objective": "To bundle changes of one or more CIs to releases, so that these changes can be tested  deployed to the live environment together",
       "section": 3,
-      "inputs": [ { "aka": "YesChange"} ],
-      "outputs": [ { "aka": "CHM" }]
-
+      "inputs": [{ "aka": "YesChange" }],
+      "outputs": [{ "aka": "CHM" }]
     },
     {
       "title": "ISRM",
@@ -147,8 +263,12 @@
       "theme": "SOC",
       "objective": "To restore normal / agreed service operation within the agreed time after the occurrence of an incident, and to respond to user service requests",
       "section": 4,
-      "inputs": [ { "aka": "KEDB"}, { "aka": "CMDB"} ],
-      "outputs": [ { "aka": "IncRec"}, {"aka": "ServiceReq"}, {"aka": "RfC"}]
+      "inputs": [{ "aka": "KEDB" }, { "aka": "CMDB" }],
+      "outputs": [
+        { "aka": "IncRec" },
+        { "aka": "ServiceReq" },
+        { "aka": "RfC" }
+      ]
     },
     {
       "title": "PM",
@@ -156,8 +276,8 @@
       "theme": "SOC",
       "objective": "To investigate the root causes of (recurring) incidents in order to avoid future recurrence of incidents by resolving the underlying cause, or to ensure workarounds or temporary fixes are available",
       "section": 4,
-      "inputs": [ { "aka": "PM"}, { "aka": "ServiceReq"}, { "aka": "KEDB"}],
-      "outputs": [ { "aka": "KEDB"}, {"aka": "ProbRec"}]
+      "inputs": [{ "aka": "PM" }, { "aka": "ServiceReq" }, { "aka": "KEDB" }],
+      "outputs": [{ "aka": "KEDB" }, { "aka": "ProbRec" }]
     },
     {
       "title": "SRM",
@@ -165,8 +285,8 @@
       "theme": "SPD",
       "objective": "To specify all service reports and ensure they are produced according to specifications in a timely manner to support decision-making",
       "section": 5,
-      "inputs": [ {"aka": "SLA"} ],
-      "outputs": [ {"aka": "ServiceRep"}]
+      "inputs": [{ "aka": "SLA" }],
+      "outputs": [{ "aka": "ServiceRep" }]
     },
     {
       "title": "CSI",
@@ -183,8 +303,8 @@
       "theme": "SPD",
       "objective": "To manage information security effectively through all activities performed to deliver and manage services, so that the confidentiality, integrity and accessibility of relevant information are preserved",
       "section": 6,
-      "inputs": [ {"aka": "SLA"}],
-      "outputs": [ {"aka": "Policy"}]
+      "inputs": [{ "aka": "SLA" }],
+      "outputs": [{ "aka": "Policy" }]
     }
   ]
 }

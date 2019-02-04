@@ -1,11 +1,13 @@
 {
   "title": "FitSM-1 GR",
   "name": "FitSM-1 : General Requirements",
+  "license": "cc-by-sa",
   "requirements": [
     {
       "title": "GR1",
       "category": "Top Management Commitment & Responsibility",
-      "requirements": [{
+      "requirements": [
+        {
           "title": "GR1.1",
           "name": "Top management of the organisation(s) involved in the delivery of services shall show evidence that they are committed to planning, implementing, operating, monitoring, reviewing, and improving the service management system (SMS) and services.",
           "items": [
@@ -31,7 +33,8 @@
     {
       "title": "GR2",
       "category": "Documentation",
-      "requirements": [{
+      "requirements": [
+        {
           "title": "GR2.1",
           "name": "The overall SMS shall be documented to support effective planning. This documentation shall include",
           "items": [
@@ -72,16 +75,19 @@
     {
       "title": "GR3",
       "category": "Defining The Scope Of Service Management",
-      "requirements": [{
-        "title": "GR3.1",
-        "name": "The scope of the SMS shall be defined and a scope statement created.",
-        "items": []
-      }]
+      "requirements": [
+        {
+          "title": "GR3.1",
+          "name": "The scope of the SMS shall be defined and a scope statement created.",
+          "items": []
+        }
+      ]
     },
     {
       "title": "GR4",
       "category": "Planning Service Management (PLAN)",
-      "requirements": [{
+      "requirements": [
+        {
           "title": "GR4.1",
           "name": "A service management plan shall be created and maintained.",
           "items": []
@@ -138,7 +144,8 @@
     {
       "title": "GR7",
       "category": "Continually Improving Service Management (ACT)",
-      "requirements": [{
+      "requirements": [
+        {
           "title": "GR7.1",
           "name": "Nonconformities and deviations from targets shall be identified and corrective actions shall be taken to prevent them from recurring.",
           "items": []

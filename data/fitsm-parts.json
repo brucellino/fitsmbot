@@ -2,8 +2,9 @@
   "title": "FitSM Parts",
   "version": "2.4",
   "url": "http://fitsm.itemo.org",
+  "license": "cc-by-nd",
   "parts": [
-    { 
+    {
       "part": 0,
       "name": "FitSM-0",
       "description": "Overview and vocabulary",

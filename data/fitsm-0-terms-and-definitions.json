@@ -1,8 +1,8 @@
 {
-"title": "For the purpose of the FitSM family of standards, the following terms and definitions apply",
-"version": "2.4",
-"license": "cc-by-nd",
-"url": "http://fitsm.itemo.org/wp-content/uploads/sites/3/2018/05/FitSM-1_Requirements.pdf",
+  "title": "For the purpose of the FitSM family of standards, the following terms and definitions apply",
+  "version": "2.4",
+  "license": "cc-by-nd",
+  "url": "http://fitsm.itemo.org/wp-content/uploads/sites/3/2018/05/FitSM-1_Requirements.pdf",
   "terms": [
     {
       "name": "Accessibility of information",
@@ -30,7 +30,8 @@
       "aka": "",
       "description": "Systematic, independent and documented process for obtaining audit evidence and evaluating it objectively to determine the extent to which the audit criteria are fulfilled",
       "section": "5.4",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "aka": "",
           "description": "Audit evidence is typically based on documented information, information provided during an audit interview, and information gathered through observation."
@@ -71,11 +72,13 @@
       "aka": "",
       "description": "Maximum extent to which a certain element of the infrastructure (such as a configuration item) can be used",
       "section": "5.7",
-      "notes": [{
-        "name": "Note 1",
-        "aka": "",
-        "description": "This might mean the total disk capacity or network bandwidth. It could also be the maximum transaction throughput of a system"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "aka": "",
+          "description": "This might mean the total disk capacity or network bandwidth. It could also be the maximum transaction throughput of a system"
+        }
+      ]
     },
     {
       "name": "Change",
@@ -89,7 +92,8 @@
       "aka": "",
       "description": "Assignment of   items to defined groups based on common attributes,  relations or other criteria",
       "section": "5.9",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "aka": "",
           "description": "Items that are subject to classification may include documents, records (such as incident records or change records) services, configuration items (CIs), etc. Defined groups may include categories(such as incident categories or change categories) or priority levels."
@@ -111,11 +115,13 @@
       "aka": "",
       "description": "Final activity in a workflow of a process to indicate no further action is required for a specific case ",
       "section": "5.10",
-      "notes": [{
-        "name": "Note 1",
-        "aka": "",
-        "description": "Cases that are subject to closure may include incidents, problems, service requests or changes. The activity  of closure puts the connected record  (such as the incident record, problem record, service request  record  or change record) in its final status, usually called ‘closed'"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "aka": "",
+          "description": "Cases that are subject to closure may include incidents, problems, service requests or changes. The activity  of closure puts the connected record  (such as the incident record, problem record, service request  record  or change record) in its final status, usually called ‘closed'"
+        }
+      ]
     },
     {
       "name": "Competence",
@@ -136,53 +142,63 @@
       "aka": "",
       "description": "Extent to which requirements are met in some context",
       "section": "5.13",
-      "notes": [{
-        "name": "Note 1",
-        "aka": "",
-        "description": "In the context of  FitSM, the term compliance is generally used as a synonym for conformity. However, sometimes conformity is used in the context of adherence to internal regulations and requirements  as defined by policies, processes  and procedures, while compliance is used in the context of adherence to external requirements, such as laws, standards and contracts"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "aka": "",
+          "description": "In the context of  FitSM, the term compliance is generally used as a synonym for conformity. However, sometimes conformity is used in the context of adherence to internal regulations and requirements  as defined by policies, processes  and procedures, while compliance is used in the context of adherence to external requirements, such as laws, standards and contracts"
+        }
+      ]
     },
     {
       "name": "Configuration",
       "aka": "",
       "description": "State of a specified set of attributes, relationships and other relevant properties of one or more configuration items (CIs)",
       "section": "5.14",
-      "notes": [{
-        "name": "Note 1",
-        "aka": "",
-        "description": "The documented configuration of a number of CIs at a given point in time is called a configuration baseline, which is usually taken prior to the deployment of one or more changes to these CIs in the live environment"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "aka": "",
+          "description": "The documented configuration of a number of CIs at a given point in time is called a configuration baseline, which is usually taken prior to the deployment of one or more changes to these CIs in the live environment"
+        }
+      ]
     },
     {
       "name": "Configuration Item",
       "aka": "CI",
       "description": "Element that contributes to the delivery of one or more services or service components, therefore requiring control of its configuration",
       "section": "5.15",
-      "notes": [{
-        "name": "Note 1",
-        "aka": "",
-        "description": "CIs can vary widely, from technical components (e.g. computer hardware, network components, software) to non-technical items such as documents (e.g. service level agreements, manuals, license documentation)."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "aka": "",
+          "description": "CIs can vary widely, from technical components (e.g. computer hardware, network components, software) to non-technical items such as documents (e.g. service level agreements, manuals, license documentation)."
+        }
+      ]
     },
     {
       "name": "Configuration management database",
       "aka": "CMDB",
       "description": "Store for data about configuration items (CIs)",
       "section": "5.16",
-      "notes": [{
-        "name": "Note 1",
-        "description": "A CMDB is not necessarily a single database covering all configuration items (CIs). It may rather be composed of multiple physical data stores."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "A CMDB is not necessarily a single database covering all configuration items (CIs). It may rather be composed of multiple physical data stores."
+        }
+      ]
     },
     {
       "name": "Continuity",
       "aka": "",
       "description": "Property of a service to maintain all or parts of its functionality, even in exceptional circumstances",
       "section": "5.17",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Exceptional circumstances include emergencies, crises or disasters which affect the ability to provide services over extended periods of time."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Exceptional circumstances include emergencies, crises or disasters which affect the ability to provide services over extended periods of time."
+        }
+      ]
     },
     {
       "name": "Customer",
@@ -196,27 +212,32 @@
       "aka": "",
       "description": "Information and its supporting medium",
       "section": "5.19",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Examples of documents include policies, plans, process description, procedures, service level agreements, contracts or records of activities performed."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Examples of documents include policies, plans, process description, procedures, service level agreements, contracts or records of activities performed."
+        }
+      ]
     },
     {
       "name": "Effectiveness",
       "aka": "",
       "description": "Extent to which goals and expectations are met",
       "section": "5.20",
-      "notes": [{
-        "name": "Note 1",
-        "description": "In a management system, effectiveness is mostly measured against the defined goals of the processes that are subject to this system."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "In a management system, effectiveness is mostly measured against the defined goals of the processes that are subject to this system."
+        }
+      ]
     },
     {
       "name": "Efficiency",
       "aka": "",
       "description": "Degree of ability to meet goals and expectations with minimum consumption of resources",
       "section": "5.21",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "description": "In a management system, efficiency is mostly considered in the context of the processes that are subject to this system."
         },
@@ -231,10 +252,12 @@
       "aka": "",
       "description": "Change of responsibility for a case (such as an incident, service request, problem or change) or activity to another individual or group",
       "section": "5.22",
-      "notes": [{
-        "name": "Note 1",
-        "description": "There are two basic types of escalation: Hierarchical escalation transfers responsibility (temporarily) to someone with a higher level of authority. Functional escalation transfers responsibility to someone with a different set of competencies or privileges required to handle the case or activity."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "There are two basic types of escalation: Hierarchical escalation transfers responsibility (temporarily) to someone with a higher level of authority. Functional escalation transfers responsibility to someone with a different set of competencies or privileges required to handle the case or activity."
+        }
+      ]
     },
     {
       "name": "Federation",
@@ -248,10 +271,12 @@
       "aka": "",
       "description": "Individual, organisation or body that works together with other federation members in a federation to provide one or more services",
       "section": "5.24",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Often, federation members will not be bound together by strict contractual agreements."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Often, federation members will not be bound together by strict contractual agreements."
+        }
+      ]
     },
     {
       "name": "Federator",
@@ -265,10 +290,12 @@
       "aka": "",
       "description": "Action or set of actions carried out to increase the level of conformity, effectiveness or efficiency of a management system, process or activity, or to increase the quality or performance of a service or service componen",
       "section": "5.26",
-      "notes": [{
-        "name": "Note 1",
-        "description": "An improvement is usually implemented after an opportunity for improvement has been identified, for instance during a service review, audit or management review."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "An improvement is usually implemented after an opportunity for improvement has been identified, for instance during a service review, audit or management review."
+        }
+      ]
     },
     {
       "name": "Incident",
@@ -324,20 +351,24 @@
       "aka": "ITSM",
       "description": "Entirety of activities performed by an IT service provider to plan, deliver, operate and control IT services offered to customers",
       "section": "5.34",
-      "notes": [{
-        "name": "Note 1",
-        "description": "The activities carried out in the ITSM context should be directed by policies and structured and organised by processes and supporting procedures."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The activities carried out in the ITSM context should be directed by policies and structured and organised by processes and supporting procedures."
+        }
+      ]
     },
     {
       "name": "Key performance indicator",
       "aka": "KPI",
       "description": "Metric that is used to track the performance, effectiveness or efficiency of a service or proces",
       "section": "5.35",
-      "notes": [{
-        "name": "Note 1",
-        "description": "KPIs are generally important metrics that will be aligned to critical success factors and important goals. KPIs are therefore a subset of all possible metrics, intended to allow for monitoring a service or process"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "KPIs are generally important metrics that will be aligned to critical success factors and important goals. KPIs are therefore a subset of all possible metrics, intended to allow for monitoring a service or process"
+        }
+      ]
     },
     {
       "name": "Known Error",
@@ -351,17 +382,20 @@
       "aka": "",
       "description": "Periodic evaluation of the suitability, maturity and efficiency of the entire management system by its accountable owner(s), from which opportunities for improvement are identified and follow-up actions are determined",
       "section": "5.37",
-      "notes": [{
-        "name": "Note 1",
-        "description": "The accountable owner of a management system is usually a top management representative of the organisation operating the management system. In a federation, the accountable owner is usually one person nominated by top management representatives of all organisations (i.e. federation members) involved."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The accountable owner of a management system is usually a top management representative of the organisation operating the management system. In a federation, the accountable owner is usually one person nominated by top management representatives of all organisations (i.e. federation members) involved."
+        }
+      ]
     },
     {
       "name": "Management system",
       "aka": "",
       "description": "Entirety of policies, processes, procedures and related resources and capabilities aiming at effectively performing management tasks in a given context and for a given subject",
       "section": "5.38",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "description": "A management system is generally intangible. It is based on the idea of a systematic, structured and process-oriented way of managing."
         },
@@ -387,10 +421,12 @@
       "aka": "",
       "description": "Case or situation where a requirement is not fulfilled",
       "section": "5.40",
-      "notes": [{
-        "name": "Note 1",
-        "description": "This may also be referred to as noncompliance."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "This may also be referred to as noncompliance."
+        }
+      ]
     },
     {
       "name": "Operational Level Agreement",
@@ -404,40 +440,48 @@
       "aka": "",
       "description": "Reference / target value for a parameter used to measure the performance of a service component, listed in an operational level agreement (OLA) or underpinning agreement (UA) related to this service component",
       "section": "5.42",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Typical operational targets might include availability or allowed resolution times for incidents."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Typical operational targets might include availability or allowed resolution times for incidents."
+        }
+      ]
     },
     {
       "name": "Policy",
       "aka": "",
       "description": "Documented set of intentions, expectations, goals, rules and requirements, often formally expressed by top management representatives in an organisation or federation",
       "section": "5.43",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Policies are then realised in processes, which are in turn made up of activities that people carry out according to defined procedures."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Policies are then realised in processes, which are in turn made up of activities that people carry out according to defined procedures."
+        }
+      ]
     },
     {
       "name": "Post-Implementation Review",
       "aka": "PIR",
       "description": "Review after the implementation of a change that determines if the change was successful",
       "section": "5.44",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Depending on the specific type and complexity of the change, the post implementation review may vary widely in its depth"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Depending on the specific type and complexity of the change, the post implementation review may vary widely in its depth"
+        }
+      ]
     },
     {
       "name": "Priority",
       "aka": "",
       "description": "Relative importance of a target, object or activity",
       "section": "5.45",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Often incidents, service requests, problems and changes are given a priority. In the case of incidents and problems, priority is usually based on the specific impact and urgency of the situation."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Often incidents, service requests, problems and changes are given a priority. In the case of incidents and problems, priority is usually based on the specific impact and urgency of the situation."
+        }
+      ]
     },
     {
       "name": "Problem",
@@ -458,10 +502,12 @@
       "aka": "",
       "description": "Structured set of activities, with clearly defined responsibilities, that bring about a specific objective or set of results from a set of defined inputs",
       "section": "5.48",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Generally, a process consists of a number of activities used to manage services, if the process is part of a service management system (SMS)."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Generally, a process consists of a number of activities used to manage services, if the process is part of a service management system (SMS)."
+        }
+      ]
     },
     {
       "name": "Record",
@@ -489,57 +535,68 @@
       "aka": "",
       "description": "Possible negative occurrence that would have a negative impact on the service provider’s ability to deliver agreed services to customers, or that would decrease the value generated through some service",
       "section": "5.52",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Risk is made up of the probability of the threat entailed, the vulnerability to that threat of some asset, and the impact the threat would have, if it occurred."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Risk is made up of the probability of the threat entailed, the vulnerability to that threat of some asset, and the impact the threat would have, if it occurred."
+        }
+      ]
     },
     {
       "name": "Role",
       "aka": "",
       "description": "Set of responsibilities and connected behaviours or actions collected into a logical unit that can be assigned to an individual or group",
       "section": "5.53",
-      "notes": [{
-        "name": "Note 1",
-        "description": "An individual may take over multiple roles."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "An individual may take over multiple roles."
+        }
+      ]
     },
     {
       "name": "Service",
       "aka": "",
       "description": "Way to provide value to customers through bringing about results that they want to achieve",
       "section": "5.54",
-      "notes": [{
-        "name": "Note 1",
-        "description": "In the context of the FitSM standard series, when referring to services, usually IT  services are meant"
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "In the context of the FitSM standard series, when referring to services, usually IT  services are meant"
+        }
+      ]
     },
     {
       "name": "Service Acceptance Criteria",
       "aka": "SAC",
       "description": "Criteria that must be fulfilled by the time a new or changed service is deployed and made available to customers / users",
       "section": "5.55",
-      "notes": [{
-        "name": "Note 1",
-        "description": "SAC are defined when a new or changed service is designed, and they may be updated or refined during the development or transition phase. They may cover functional and non-functional aspects of the specific service to be deployed. SAC are part of the service design and transition package (SDTP)."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "SAC are defined when a new or changed service is designed, and they may be updated or refined during the development or transition phase. They may cover functional and non-functional aspects of the specific service to be deployed. SAC are part of the service design and transition package (SDTP)."
+        }
+      ]
     },
     {
       "name": "Service Catalogue",
       "aka": "",
       "description": "Customer-facing list of all live services offered along with relevant information about these services",
       "section": "5.56",
-      "notes": [{
-        "name": "Note 1",
-        "description": "The service catalogue can be regarded as a filtered version of and customers’ view on the service portfolio."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The service catalogue can be regarded as a filtered version of and customers’ view on the service portfolio."
+        }
+      ]
     },
     {
       "name": "Service component",
       "aka": "",
       "description": "Logical part of a service that provides a function enabling or enhancing a service",
       "section": "5.57",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "description": "A service is usually composed of several service components."
         },
@@ -558,10 +615,12 @@
       "aka": "SDTP",
       "description": "Entirety of plans for the design and transition of a specific new or changed service",
       "section": "5.58",
-      "notes": [{
-        "name": "Note 1",
-        "description": "An SDTP should be produced for every new or changed service. It may consist of a number of documented plans and other relevant information, available in different formats, including a list of requirements and service acceptance criteria (SAC), a project plan, communication and training plans,  plans and specifications, resource plans, development and deployment schedules /timetables, etc."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "An SDTP should be produced for every new or changed service. It may consist of a number of documented plans and other relevant information, available in different formats, including a list of requirements and service acceptance criteria (SAC), a project plan, communication and training plans,  plans and specifications, resource plans, development and deployment schedules /timetables, etc."
+        }
+      ]
     },
     {
       "name": "Service Level Agreement",
@@ -575,7 +634,8 @@
       "aka": "",
       "description": "Entirety of activities performed by a service provider to plan, deliver, operate and control services offered to customers",
       "section": "5.60",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "description": "The activities carried out in the service management context should be directed by policies and structured and organised by processes and supporting procedures."
         },
@@ -597,20 +657,24 @@
       "aka": "SMS",
       "description": "Overall management system that controls and supports management of services within an organisation or federation",
       "section": "5.62",
-      "notes": [{
-        "name": "Note 1",
-        "description": "The SMS can be regarded as the entirety of interconnected policies, processes, procedures, roles, agreements, plans, related resources and other elements needed and used by a service provider to effectively manage the delivery of services to customers."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "The SMS can be regarded as the entirety of interconnected policies, processes, procedures, roles, agreements, plans, related resources and other elements needed and used by a service provider to effectively manage the delivery of services to customers."
+        }
+      ]
     },
     {
       "name": "Service Portfolio",
       "aka": "",
       "description": "Internal list that details all the services offered by a service provider, including those in preparation, live and discontinued",
       "section": "5.63",
-      "notes": [{
-        "name": "Note 1",
-        "description": "For each service, the service portfolio may include information such as its value proposition, target customer base, service description, relevant technical specifications, cost and price, risks to the service provider, service level packages offered, etc.."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "For each service, the service portfolio may include information such as its value proposition, target customer base, service description, relevant technical specifications, cost and price, risks to the service provider, service level packages offered, etc.."
+        }
+      ]
     },
     {
       "name": "Service Provider",
@@ -631,10 +695,12 @@
       "aka": "",
       "description": "User request for information, advice, access to a service or a pre-approved change",
       "section": "5.66",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Service requests are often handled by the same process and tools as incidents."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Service requests are often handled by the same process and tools as incidents."
+        }
+      ]
     },
     {
       "name": "Service Review",
@@ -648,10 +714,12 @@
       "aka": "",
       "description": "Reference / target values for a parameter used to measure the performance of a service, listed in a service level agreement (SLA) related to this service",
       "section": "5.68",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Typical service targets might include availability or resolution time for incidents."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Typical service targets might include availability or resolution time for incidents."
+        }
+      ]
     },
     {
       "name": "Supplier",
@@ -672,7 +740,8 @@
       "aka": "UA",
       "description": "Documented agreement between a service provider and an external supplier that specifies the underpinning service(s) or service component(s) to be provided by the supplier, together with the related service targets",
       "section": "5.71",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "description": "A UA can be seen as a service level agreement (SLA) with an external supplier where the service provider is in the customer role."
         },
@@ -701,17 +770,20 @@
       "aka": "",
       "description": "Benefit to a customer and their users delivered by a service",
       "section": "5.74",
-      "notes": [{
-        "name": "Note 1",
-        "description": "Value should be considered as a composition of the utility (fitness for purpose) and warranty (fitness for use, covering sufficient availability / continuity, capacity / performance and information security) connected to a service."
-      }]
+      "notes": [
+        {
+          "name": "Note 1",
+          "description": "Value should be considered as a composition of the utility (fitness for purpose) and warranty (fitness for use, covering sufficient availability / continuity, capacity / performance and information security) connected to a service."
+        }
+      ]
     },
     {
       "name": "Workaround",
       "aka": "",
       "description": "Means of circumventing or mitigating the symptoms of a known error that helps to resolve incidents caused by this known error, while the underlying root cause is not permanently eliminated",
       "section": "",
-      "notes": [{
+      "notes": [
+        {
           "name": "Note 1",
           "description": "Workarounds are often applied in a situation, when the actual root cause of (recurring) incidents cannot be resolved due to lack of resources or ability."
         },

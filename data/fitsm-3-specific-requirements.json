@@ -224,7 +224,6 @@
             "Ensure that customer complaints are handled according to the process",
             "Coordinate customer satisfaction surveys",
             "Review the results from customer service reviews"
-
           ]
         },
         {
@@ -259,9 +258,9 @@
         {
           "name": "SUPPM Process manager",
           "tasks": [
-              "Generic tasks of a process manager",
-              "Maintain the supplier database",
-              "Ensure that supplier performance is monitored according to the process"
+            "Generic tasks of a process manager",
+            "Maintain the supplier database",
+            "Ensure that supplier performance is monitored according to the process"
           ]
         },
         {
@@ -270,7 +269,7 @@
             "Act as the primary contact point for a specific supplier",
             "Maintain the relationship with that supplier by regular communication",
             "Maintain mechanisms for monitoring the performance of the supplier"
-          ]         
+          ]
         }
       ]
     },
@@ -285,10 +284,10 @@
         },
         {
           "name": "ISRM Process manager",
-          "tasks":  [
-          "Generic tasks of a process manager",
-          "Ensure that all incidents and service requests are recorded, and that records are of sufficient quality to enable traceability and long-term analysis",
-          "Monitor the overall progress of incident resolution and service request fulfilment, and identify potential violations of target response and resolution times"
+          "tasks": [
+            "Generic tasks of a process manager",
+            "Ensure that all incidents and service requests are recorded, and that records are of sufficient quality to enable traceability and long-term analysis",
+            "Monitor the overall progress of incident resolution and service request fulfilment, and identify potential violations of target response and resolution times"
           ]
         },
         {
@@ -390,7 +389,7 @@
         },
         {
           "name": "Change owner",
-          "tasks": [ 
+          "tasks": [
             "Control and coordinate all activities in the lifecycle of a specific change",
             "Monitor the progress of change evaluation and implementation for this change",
             "Ensure that the change record is complete and up-to-date at any time from recording the request for change to completion of the post implementation review",
