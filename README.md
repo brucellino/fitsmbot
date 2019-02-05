@@ -12,19 +12,19 @@ The bot's DNA consists of the FitSM standard itself. This does not change from b
 FitSM Bot won't tell you (yet) anything about how to _implement_ the standard, it's just an expert on the standard itself.
 
 FitSM bot should know everything about the FitSM standard:
-  
-  - parts
-  - terms
-  - requirements
-    - general
-    - process-specific
-  - role model
-  - process model
+
+- parts
+- terms
+- requirements
+  - general
+  - process-specific
+- role model
+- process model
 
 These are kept in JSON in the `data` directory. The schema of the data attempts to follow the standard itself, but some design choices in the schema have been made.
 These are entirely up for discussion.
 
-##  Persistence
+## Persistence
 
 You are free to tell FitSM about your services, your implementation of FitSM, and human roles in your role model in any way you like, but this - like any information which one has to remember - needs to be _persisted_ into the bot's "brain".
 Typically, Hubot uses a Redis instance to persist key-value data.
@@ -66,18 +66,15 @@ Deployment can be done on any Docker-enabled host, with the handy docker-compose
 This uses dotenv files for reading the variables, as discussed [below][#configuration] including the slack token for connecting to the Slack API.
 Before running with the Slack adaptor, you need a token, which can be generated after creating the bot in the [Slack apps page](https://api.slack.com/apps) - see also [the Slack Hubot SDK documentation](https://slackapi.github.io/hubot-slack/#getting-a-slack-token).
 
-
-
 ### Configuration
 
 Hubot requires configuration, with most variables set in the environment.
 There are two types of variables:
- 
- - public variables: variables that can be stored in change control.
- - secret variables: variables which are _secret_ and should not be stored in change control.
+
+- public variables: variables that can be stored in change control.
+- secret variables: variables which are _secret_ and should not be stored in change control.
 
 Secrets can be set on the command line as environment variables, and then accessed via `process.env.ENV_NAME`
-
 
 ### Scripting
 
@@ -103,14 +100,12 @@ available hubot plugins on [npmjs.com][npmjs] or by using `npm search`:
     hubot-pandapanda a hubot script for panda responses =missu 2014-11-30 0.9.2   hubot hubot-scripts panda
     ...
 
-
 To use a package, check the package's documentation, but in general it is:
 
 1. Use `npm install --save` to add the package to `package.json` and install it
 2. Add the package name to `external-scripts.json` as a double quoted string
 
 You can review `external-scripts.json` to see what is included by default.
-
 
 ### hubot-scripts
 
@@ -124,7 +119,6 @@ extension as a double quoted string to the `hubot-scripts.json` file in this
 repo.
 
 [hubot-scripts]: https://github.com/github/hubot-scripts
-
 
 ## Deployment
 
