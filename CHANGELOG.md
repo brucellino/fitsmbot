@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tagged v0.0.5
 - Added prettier
 - Prettified the JSON in data/
+- Added license description to fitsm JSON files (Closed #15)
 
 ## v0.0.4
 
