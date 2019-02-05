@@ -78,7 +78,7 @@ module.exports = (robot) ->
       res.message.thread_ts = res.message.rawMessage.ts
       res.send "Slight digression, we need to talk about these BADGERS"
 
-  robot.hear /^(sweet|dude)!/i, (msg) ->
-    switch msg.match[1].toLowerCase()
-      when "sweet" then msg.send "Dude! 🤙"
-      when "dude" then msg.send "Sweet! 🤙"
+  robot.hear /^(sweet|dude)!/i, (res) ->
+    switch res.match[1].toLowerCase()
+      when "sweet" then res.send "Dude! 🤙"
+      when "dude" then res.send "Sweet! 🤙"
