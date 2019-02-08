@@ -33,7 +33,7 @@ randomAdvice = (msg) ->
 
 
 module.exports = (robot) ->
-  robot.respond /what (do you|should I) do (when|about) (.*)/i, (msg) ->
+  robot.respond /what (do|should) (you|I) do (when|about) (.*)/i, (msg) ->
     getAdvice msg, msg.match[3]
 
   robot.respond /how do you handle (.*)/i, (msg) ->

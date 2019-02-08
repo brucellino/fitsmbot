@@ -19,7 +19,6 @@
 #   @brucellino
 
 { WebClient } = require "@slack/client"
-
 module.exports = (robot) ->
   web = new WebClient robot.adapter.options.token
   
@@ -55,12 +54,24 @@ module.exports = (robot) ->
     console.log 'process.env."#{GITHUB_APP_NAME}"'
     
   
-
-  robot.hear /(.*)('s|is) cool(.*)/i, (res) ->
+  # React well when positive things are said
+  robot.hear /(.*)('s|is|are) (cool|good|great|awesome|the best)(.*)/i, (res) ->
+    reaction_moji = [
+      "thumbsup"
+      "tada"
+      "sparkles"
+      "heart_eyes"
+      "sunglasses"
+      "star-struck"
+      "A"
+      "man_dancing"
+      "man_with_bunny_ears_partying"
+      "man_in_business_suit_levitating"
+    ]
     console.log res.message.room
     console.log res.message.id
     reaction = {
-      name: "thumbsup",
+      name: reaction_moji[Math.floor(Math.random()*reaction_moji.length)],
       channel: res.message.room,
       timestamp: res.message.id
       }
@@ -78,7 +89,10 @@ module.exports = (robot) ->
       res.message.thread_ts = res.message.rawMessage.ts
       res.send "Slight digression, we need to talk about these BADGERS"
 
-  robot.hear /^(sweet|dude)!/i, (res) ->
-    switch res.match[1].toLowerCase()
-      when "sweet" then res.send "Dude! 🤙"
-      when "dude" then res.send "Sweet! 🤙"
+  robot.hear /^(swe(e)+t|du+de)!$/i, (res) ->
+    reaction = {
+      name: "call_me_hand"
+      channel: res.message.room
+      timestamp: res.message.id
+    }
+    web.reactions.add reaction

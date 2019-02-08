@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.0.6
+
+A slight cleanup of the code and the ability to get issues from github.
+
+### Changed
+
+- Tagged v0.0.6
+- Changed reaction to surfer happiness from a message to a reaction, using the Slack Web API
+- Respond with a reload gif when you ask for the scripts to be reloaded
+- Be able to get issues with `<robot> get issues`
+
 ## v0.0.5
 
 ### Changed

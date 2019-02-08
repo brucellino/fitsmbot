@@ -44,8 +44,17 @@ module.exports = (robot) ->
       listener = {}
     oldListeners = null
     oldCommands = null
-    msg.send "Reloaded all scripts"
-
+    url = "#{process.env.GIPHY_API_URL}/search?q=reload&api_key=#{process.env.GIPHY_API_KEY}&limit=20"
+    # msg.send "Reloaded all scripts"
+    robot.http(url)
+        .get() (err, response, body) ->
+          if err
+            res.send "encountered error #{err}"
+            return
+          data = JSON.parse(body)
+          number = Math.floor( Math.random() * 20)
+          console.log(number)
+          msg.send data.data[number].images.original.url
 
   walkSync = (dir, filelist) ->
     #walk through given directory and collect files

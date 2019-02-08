@@ -17,7 +17,8 @@ messages = [
   "Is that tone really necessary?"
   "Robots have feelings too, you know."
   "You should try to be nicer."
-  "Sticks and stones cannot pierce my anodized exterior, but words *do* hurt me."
+  "Sticks and stones cannot pierce my anodized exterior,
+  but words *do* hurt me."
   "I'm sorry, I'll try to do better next time."
 ]
 
