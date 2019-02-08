@@ -44,7 +44,7 @@ module.exports = (robot) ->
       listener = {}
     oldListeners = null
     oldCommands = null
-    url = "#{process.env.GIPHY_API_URL}/search?q=reload&api_key=#{process.env.GIPHY_API_KEY}&limit=20"
+    url = "#{process.env.GIPHY_API_URL}/search?q=clean-slate&api_key=#{process.env.GIPHY_API_KEY}&limit=100"
     # msg.send "Reloaded all scripts"
     robot.http(url)
         .get() (err, response, body) ->
@@ -52,7 +52,7 @@ module.exports = (robot) ->
             res.send "encountered error #{err}"
             return
           data = JSON.parse(body)
-          number = Math.floor( Math.random() * 20)
+          number = Math.floor( Math.random() * 100)
           console.log(number)
           msg.send data.data[number].images.original.url
 
