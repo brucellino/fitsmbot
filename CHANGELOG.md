@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.1.0
+
+I can now tell you about processes! Listeners have been added to list and describe processes,
+bringing this to parity in functionality with the terms.
+
+## Changed
+
+- Added new listeners to list and define processes, from the fitsm process model:
+  - `@fitsmbot list processes` - lists all processes
+  - `@fitsmbot define process <process title|e.g. SPM>` - show details about the process requested
+  - `@fitsmbot (describe) fitsm processes` - gives processes and their sections
+  - `@fitsmbot list processes in section <sec>` - list processes in a given section
+- closed #12
+- slightly reformatted the output of the `get issues` listener
+
 ## v0.0.6
 
 A slight cleanup of the code and the ability to get issues from github.

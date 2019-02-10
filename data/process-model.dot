@@ -1,0 +1,57 @@
+// FitSM process model
+digraph G {
+  splines="FALSE";
+  imagepath=".";
+
+  /* Entities */
+  // processes
+  SPM   [label="1 SPM"    , shape="ellipse", URL=""]
+  SLM   [label="2 SLM"    , shape="ellipse", URL=""]
+  SRM   [label="3 SRM"    , shape="ellipse", URL=""]
+  SACM  [label="4 SACM"   , shape="ellipse", URL=""]
+  CAPM  [label="5 CAPM"   , shape="ellipse", URL=""]
+  ISM   [label="6 ISM"    , shape="ellipse", URL=""]
+  CRM   [label="7 CRM"    , shape="ellipse", URL=""]
+  SUPPM [label="8 SUPPM"  , shape="ellipse", URL=""]
+  ISRM  [label="9 ISRM"   , shape="ellipse", URL=""]
+  PM    [label="10 PM"    , shape="ellipse", URL=""]
+  CONFM [label="11 CONFM" , shape="ellipse", URL=""]
+  CHM   [label="12 CHM"   , shape="ellipse", URL=""]
+  RDM   [label="13 RDM"   , shape="ellipse", URL=""]
+  CSI   [label="14 CSI"   , shape="ellipse", URL=""]  
+  
+  // databases / persistent stores
+  CustomerDatabase   [label="Customer\nDatabase"                       , shape="cylinder", URL=""]
+  SupplierDatabase   [label="Supplier\nDatabase"                       , shape="cylinder", URL=""]
+  KnownErrorDatabase [label="Known Error\nDatabase (KEDB)"             , shape="cylinder", URL=""]
+  ConfigMgmtDatabase [label="Configuration Management\nDatabase (CMDB)", shape="cylinder", URL=""]
+
+  // documents
+  CustomerRequirements    [label="Identified Customer\nRequirements" , shape="note", URL=""]
+  ServicePortfolio        [label="Service\nPortfolio"                , shape="note", URL=""]
+  UnderpinningAgreement   [label="Underpinning\nAgreement (UA)]"     , shape="note", URL=""]
+  OperatingLevelAgreement [label="Operating Level\nAgreement (OLA)"  , shape="note", URL=""]
+  ServiceRecords          [label="Service\nRecords"                  , shape="note", URL=""]
+  AvCoPlans               [label="Availability and\nContinuity Plans", shape="note", URL=""]
+  CapacityPlans           [label="Capacity\nPlans"                   , shape="note", URL=""]
+  AssetsRisks             [label="Assests\nand Risks"                , shape="note", URL=""]
+  SecurityPolicies        [label="Security\nPolicies"                , shape="note", URL=""]
+  SecurityControls        [label="Security\nControls"                , shape="note", URL=""]
+  IncidentRecords         [label="Incident\nRecords"                 , shape="note", URL=""]
+  ServiceRequestRecords   [label="Service\nRequest\nRecords"         , shape="note", URL=""]
+  ProblemRecords          [label="Problem\nRecords"                  , shape="note", URL=""]
+  RequestForChange        [label="Request\nfor Change"               , shape="note", URL=""]
+  ChangeRecords           [label="Change\nRecords"                   , shape="note", URL=""]
+  ConfigurationInfo       [label="Configuration\nInformation"        , shape="note", URL=""]
+  ChangeSchedule          [label="Change\nSchedule"                  , shape="note", URL=""]
+  ReleasePlans            [label="Release\nPlans"                    , shape="note", URL=""]
+  ReleaseRecords          [label="Release\nRecords"                  , shape="note", URL=""]
+
+  // Roles
+  AccountManager [label="Accoun\nManager" image="id-card.png" style="invisible"]
+  /* Relationships */
+  
+
+  /* Ranks */
+  { rank=same }; # max is bottom|; shortName; };
+}

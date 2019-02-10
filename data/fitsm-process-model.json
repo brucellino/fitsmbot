@@ -290,11 +290,11 @@
     },
     {
       "title": "CSI",
-      "theme": "",
+      "theme": "SPD",
       "name": "Continual Service Improvement Management",
       "objective": "To identify, prioritize, plan, implement and review improvements to services and service management",
       "section": 5,
-      "inputs": [],
+      "inputs": [{ "aka": "RfC"}],
       "outputs": []
     },
     {

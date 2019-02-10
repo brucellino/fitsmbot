@@ -150,7 +150,7 @@ module.exports = (robot) ->
         "author_name": issue.user.login
         "author_link": issue.user.html_url
         "author_icon": issue.user.avatar_url
-        "title": issue.title
+        "title": "#{issue.number} - #{issue.title}"
         "title_link": issue.html_url
         "text": "#{issue.body}"
         # "fields": [
