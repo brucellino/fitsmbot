@@ -99,6 +99,12 @@
       "type": "record"
     },
     {
+      "name": "Underpinning Agreement",
+      "aka": "UA",
+      "singleton": false,
+      "type": "record"
+    },
+    {
       "name": "Availability and Continuity Plan",
       "aka": "AvCoPlan",
       "singleton": false,
@@ -173,15 +179,18 @@
           "aka": "SP"
         },
         {
-          "name": "Service Design and Transition Package"
+          "name": "Service Design and Transition Package",
+          "aka": "SDTP"
         }
       ],
       "inputs": [
         {
-          "name": "Service Specifications"
+          "name": "Service Specifications",
+          "aka": "Service Specs"
         },
         {
-          "name": "Customer Requirement"
+          "name": "Customer Requirement",
+          "aka": "CustReq"
         }
       ]
     },
@@ -191,8 +200,16 @@
       "theme": "SPD",
       "objective": "To maintain a service catalogue, and to define, agree and monitor service levels with customers by establishing meaningful service level agreements (SLAs) and supportive operational level (OLAs) and underpinning agreements (UAs) with suppliers.",
       "section": 1,
-      "inputs": [{ "aka": "SP" }],
-      "outputs": [{ "aka": "SC" }, { "aka": "SLA" }]
+      "inputs": [
+        { "aka": "SP", "name": "Service Portfolio" },
+        { "aka": "CustReq", "name": "Identified Customer Requests"}
+      ],
+      "outputs": [
+        { "aka": "SC", "name": "Service Catalogue" },
+        { "aka": "SLA", "name": "Service Portfolio" },
+        { "aka": "OLA", "name": "Operating Level Agreement"},
+        { "aka": "UA", "name": "Underpinning Agreement"}
+      ]
     },
     {
       "title": "CRM",
@@ -200,8 +217,8 @@
       "theme": "SPD",
       "objective": "To establish and maintain a good relationship with customers receiving services",
       "section": 1,
-      "inputs": [],
-      "outputs": []
+      "inputs": [{ "aka": "CustDB", "name": "Customer Database"}],
+      "outputs": [{ "aka": "CustReq", "name": "Identified Customer Requests"}]
     },
     {
       "title": "SUPPM",
@@ -209,8 +226,8 @@
       "name": "Supplier Relationship Management",
       "objective": "To establish and maintain a healthy relationship with suppliers supporting the service provider in delivering services to customers, and monitor their performance",
       "section": 2,
-      "inputs": [],
-      "outputs": [{ "aka": "SuppDB" }]
+      "inputs": [{ "aka": "UA", "name": "Underpinning Agreements"}],
+      "outputs": [{ "aka": "SuppDB", "name": "Supplier Database" }]
     },
     {
       "title": "SACM",
@@ -218,8 +235,8 @@
       "theme": "SPD",
       "objective": "To ensure sufficient service availability to meet agreed requirements and adequate service ",
       "section": 2,
-      "inputs": [{ "aka": "SLA" }],
-      "outputs": [{ "aka": "AvCoPlan" }]
+      "inputs": [{ "aka": "SLA","name": "Service Level Agreements"}],
+      "outputs": [ { "aka": "AvCoPlan", "name": "Availability and Continuity Plan" }]
     },
     {
       "title": "CAPM",
@@ -227,17 +244,20 @@
       "theme": "SPD",
       "objective": "To ensure sufficient capacities are provided to meet agreed service capacity and performance requirements",
       "section": 2,
-      "inputs": [{ "aka": "SLA" }],
-      "outputs": [{ "aka": "CapPlan" }]
+      "inputs": [{"aka": "SLA", "name": "Service Level Agreements" }],
+      "outputs": [{ "aka": "CapPlan", "name": "Capacity Plans" }]
     },
     {
       "title": "CONFM",
-      "name": "Configuraiton Management",
+      "name": "Configuration Management",
       "theme": "SOC",
       "objective": "To provide and maintain a logical model of all configuration items (CIs) and their relationships and dependencies",
       "section": 3,
-      "inputs": [{ "aka": "CHM" }],
-      "outputs": [{ "aka": "CMDB" }, { "aka": "CHM" }]
+      "inputs": [{ "aka": "CHM", "name": "Change Management" }],
+      "outputs": [
+        { "aka": "CMDB", "name": "Configuration Management Database"},
+        { "aka": "CHM", "name": "Change Management"}
+      ]
     },
     {
       "title": "CHM",
@@ -245,8 +265,11 @@
       "theme": "SOC",
       "objective": "To ensure changes to CIs are planned, approved, implemented and reviewed in a controlled to avoid adverse impact of changes to services or the customers receiving services",
       "section": 3,
-      "inputs": [{ "aka": "RfC" }, { "aka": "CONFM" }],
-      "outputs": [{ "aka": "YesChange" }, { "aka": "RfC" }, { "aka": "CONFM" }]
+      "inputs": [
+        { "aka": "RfC", "name": "Request for Change" },
+        { "aka": "RelRec", "name": "Release Records"}
+      ],
+      "outputs": [{ "aka": "YesChange", "name": "Cha" }, { "aka": "RfC" }, { "aka": "CONFM" }]
     },
     {
       "title": "RDM",

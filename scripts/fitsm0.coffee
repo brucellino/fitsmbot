@@ -282,3 +282,46 @@ module.exports = (robot) ->
       res.reply "Try using something like
         \"tell me about fitsm process service portfolio management\""
       res.reply "Try sometihng like what are the fitsm processes"
+
+  # Show inputs and outputs of processes
+  robot.hear /process io (.*)/i, (res) ->
+    processes = fitsm_processes_model.processes
+    processRequested = res.match[1]
+    console.log "#{processRequested} requested}"
+    if processRequested.toLowerCase() in (processes.map (p) -> p.title.toLowerCase())
+      foundProcess = (
+        processes.filter (p) -> p.title == processRequested.toUpperCase()
+      )
+      console.log foundProcess
+      res.reply "Getting inputs and outputs for
+      #{processRequested.toUpperCase()}"
+      inputs = foundProcess.inputs
+      outputs = foundProcess.outputs
+      # construct attachment fields
+      for item in [foundProcess.inputs, foundProcess.outputs]
+        console.log item
+        if( item.aka? and item.name? )
+          f[item] = (
+            title: item.aka
+            value: item.name
+            short: true
+          )
+      console.log "#{(x.name for x in f)}"
+      message =
+        channel: res.message.room
+        attachments: [
+          fallback: "Inputs and outputs for process
+          #{processRequested.toUpperCase()}"
+          color: "#36a64f"
+          pretext: "Inputs and outputs for process
+          #{processRequested.toUpperCase()}"
+          title: "Inputs and outputs for process
+          #{processRequested.toUpperCase()}"
+          title_link: "https://github.com/EGI-Foundation/FitSMBot"
+          fields: f
+          ts: res.message.id
+        ]
+      web.chat.postMessage(message)
+    else
+      res.reply "Sorry, I don't think #{processRequested} is a process in FitSM.
+      Can you try again with one of #{(p.title for p in processes)}?"

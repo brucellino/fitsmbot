@@ -44,7 +44,25 @@ module.exports = (robot) ->
       listener = {}
     oldListeners = null
     oldCommands = null
-    url = "#{process.env.GIPHY_API_URL}/search?q=clean-slate&api_key=#{process.env.GIPHY_API_KEY}&limit=100"
+    query_terms = [
+      'clean-slate',
+      'reload',
+      'reset',
+      'restart',
+      'start-over',
+      'clean-sweep',
+      'begin'
+    ]
+    console.log "there are #{query_terms.length} terms"
+    randomIndex = Math.floor Math.random() * (query_terms.length + 1)
+    console.log randomIndex
+    query = query_terms[randomIndex]
+    url = "#{process.env.GIPHY_API_URL}/search?\
+    q=#{query}&\
+    api_key=#{process.env.GIPHY_API_KEY}&\
+    limit=100&\
+    rating=pg-13"
+    console.log url
     # msg.send "Reloaded all scripts"
     robot.http(url)
         .get() (err, response, body) ->

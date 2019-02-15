@@ -133,10 +133,9 @@ module.exports = (robot) ->
       res.reply "there is a shocking lack of suggestions"
   
   robot.respond /get issues/i, (res) ->
-    robot.reply "I don't really like to air my dirty laundry in public,
+    res.reply "I don't really like to air my dirty laundry in public,
     but you can see my issues at #{issues_url}"
     console.log issues_url
-    console.log process.env.HUBOT_GITHUB_TOKEN
     ts = res.message.id
     ch = res.message.room
     console.log "timestamp is #{ts}, room is #{ch}"
