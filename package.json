@@ -36,7 +36,7 @@
     "chai": "^2.3.0",
     "coffeelint": "^2.1.0",
     "coffeescript": "^1.12.7",
-    "hubot-test-helper": "^0.0.6",
+    "hubot-test-helper": "^0.0.7",
     "mocha": "^2.2.5",
     "sinon": "^6.1.5"
   }
