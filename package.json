@@ -10,7 +10,7 @@
   "dependencies": {
     "@slack/client": "^5.0.0",
     "coffeescript": "^2.0.0",
-    "hubot": "^3.2.0",
+    "hubot": "^5.0.0",
     "hubot-auth": "^2.1.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-redis-brain": "0.0.4",
