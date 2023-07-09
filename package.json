@@ -23,7 +23,7 @@
     "prettier": "^2.0.0"
   },
   "engines": {
-    "node": "10.24.1"
+    "node": "18.16.1"
   },
   "repository": {
     "type": "git",
