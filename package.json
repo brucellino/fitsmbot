@@ -12,7 +12,7 @@
     "coffeescript": "^2.0.0",
     "hubot": "^8.0.0",
     "hubot-auth": "^2.1.0",
-    "hubot-diagnostics": "1.2.0",
+    "hubot-diagnostics": "1.2.1",
     "hubot-redis-brain": "2.0.0",
     "hubot-rules": "^1.0.0",
     "hubot-script-shellcmd": "1.0.1",
