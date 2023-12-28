@@ -33,7 +33,7 @@
     "url": "https://github.com/EGI-Foundation/fitsmbot/issues"
   },
   "devDependencies": {
-    "chai": "^4.0.0",
+    "chai": "^5.0.0",
     "coffeelint": "^2.1.0",
     "coffeescript": "^2.0.0",
     "hubot-test-helper": "^1.0.0",
